@@ -112,10 +112,52 @@
       font-size: 0.95rem;
       color: #333;
     }
+    #mute-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #5a7d5a;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
   <header>Verde Raíz</header>
+
+  <audio id="bg-audio" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/05/20/audio_7bdfcdf55d.mp3?filename=birds-in-spring-14657.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <button id="mute-button">🔇</button>
+  <script>
+    const audio = document.getElementById('bg-audio');
+    const muteBtn = document.getElementById('mute-button');
+    audio.volume = 0;
+    const fadeIn = setInterval(() => {
+      if (audio.volume < 1) {
+        audio.volume = Math.min(1, audio.volume + 0.05);
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 250);
+
+    muteBtn.onclick = () => {
+      if (audio.muted) {
+        audio.muted = false;
+        muteBtn.textContent = '🔇';
+      } else {
+        audio.muted = true;
+        muteBtn.textContent = '🔊';
+      }
+    }
+  </script>
 
   <section class="intro">
     <p>
