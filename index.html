@@ -1,143 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verde Raíz</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #eaf4ea;
-      color: #333;
     }
-    .hero {
-      height: 100vh;
-      background: url('jardin_2.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    header {
+      background-color: #9bb89c;
+      padding: 1.5rem;
       text-align: center;
       color: white;
-      background-color: rgba(0, 0, 0, 0.4);
-      background-blend-mode: multiply;
-      padding: 0 1rem;
+      font-size: 2rem;
+      font-weight: bold;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
+    .intro {
+      background-color: #c9d9cd;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #333;
     }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .efemerides, .calendario {
-      background-color: #f0f8f0;
+    .contact-section {
+      background-color: #e9f3e4;
       padding: 2rem;
       text-align: center;
     }
-    .efemerides ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1.1em;
+    .contact-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      color: #5a7d5a;
     }
-    .calendario {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
       gap: 1rem;
     }
-    .evento {
-      background-color: #ffffff;
-      border: 2px solid #aad4aa;
-      padding: 1rem;
-      border-radius: 1rem;
-      width: 200px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    input, textarea, select {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
     }
-    .audio-control {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      padding: 0.5rem;
+    button {
+      background-color: #5a7d5a;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    audio {
-      display: none;
+    button:hover {
+      background-color: #4c6f4c;
+    }
+    .who-we-are {
+      background-color: #f1f9f0;
+      padding: 2rem;
+      text-align: center;
+    }
+    .who-we-are h2 {
+      font-size: 1.8rem;
+      color: #486a48;
+    }
+    .who-we-are p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Verde Raíz</h1>
-    <p>El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos. Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.</p>
-    <p>Brindamos soluciones.</p>
-  </div>
+  <header>Verde Raíz</header>
 
-  <div class="efemerides">
-    <h2>🌿 Efemérides de la Naturaleza</h2>
-    <ul>
-      <li>22 de abril: Día de la Tierra</li>
-      <li>5 de junio: Día Mundial del Medio Ambiente</li>
-      <li>14 de febrero: Día de la Mariposa</li>
-      <li>16 de junio: Día de los Polinizadores</li>
-      <li>1 de julio: Día del Arquitecto</li>
-      <li>4 de agosto: Día del Paisajista</li>
-      <li>15 de octubre: Día del Jardinero</li>
-      <li>18 de octubre: Día de la Naturaleza</li>
-      <li>11 de septiembre: Día del Maestro</li>
-      <li>25 de mayo: Día de la Patria</li>
-      <li>20 de junio: Día de la Bandera</li>
-      <li>9 de julio: Día de la Independencia</li>
-      <li>21 de marzo: Otoño 🍂</li>
-      <li>21 de junio: Invierno ❄️</li>
-      <li>21 de septiembre: Primavera 🌸</li>
-      <li>21 de diciembre: Verano ☀️</li>
-      <li>12 de octubre: Diversidad Cultural</li>
-    </ul>
-  </div>
+  <section class="intro">
+    <p>
+      El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.<br>
+      Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.<br>
+      Brindamos soluciones.
+    </p>
+  </section>
 
-  <div class="calendario">
-    <div class="evento">
-      <h3>🧑‍🌾 Taller de Huerta Orgánica</h3>
-      <p>10 de agosto - 15hs</p>
-      <p>Aprendé a cultivar alimentos saludables en casa.</p>
-    </div>
-    <div class="evento">
-      <h3>🥗 Cocina Saludable</h3>
-      <p>24 de agosto - 11hs</p>
-      <p>Recetas fáciles con vegetales de estación.</p>
-    </div>
-  </div>
+  <section class="who-we-are">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Somos un equipo de profesionales apasionados por la naturaleza, el diseño y la funcionalidad. Diseñamos y ejecutamos espacios personalizados
+      con identidad propia: jardines, huertas, piletas, pérgolas, fogones, rincones de descanso y más. Nuestra visión integra saberes técnicos con
+      sensibilidad artística, y cada proyecto es pensado en armonía con el entorno. Trabajamos en colaboración con técnicos especializados en
+      construcción, priorizando siempre la sustentabilidad y el respeto por la biodiversidad.
+    </p>
+  </section>
 
-  <div class="audio-control">
-    <button onclick="toggleAudio()">🔊</button>
-  </div>
-  <audio id="bgAudio" autoplay loop>
-    <source src="sonido_bosque_sereno.mp3" type="audio/mpeg">
-    Tu navegador no soporta el audio.
-  </audio>
-
-  <script>
-    const audio = document.getElementById('bgAudio');
-    audio.volume = 0;
-    const fadeIn = setInterval(() => {
-      if (audio.volume < 0.5) {
-        audio.volume = Math.min(audio.volume + 0.01, 0.5);
-      } else {
-        clearInterval(fadeIn);
-      }
-    }, 200);
-    function toggleAudio() {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    }
-  </script>
+  <section class="contact-section">
+    <h2>Formulario de Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="tel" placeholder="Teléfono (Ej: 1134590986)" required>
+      <select>
+        <option value="consulta">Tipo de consulta</option>
+        <option value="cliente">Cliente actual</option>
+        <option value="interesado">Interesado/a en servicios</option>
+      </select>
+      <textarea rows="4" placeholder="Mensaje adicional..."></textarea>
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </section>
 </body>
 </html>
