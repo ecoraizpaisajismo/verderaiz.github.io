@@ -76,6 +76,42 @@
       margin-right: auto;
       color: #333;
     }
+    .gallery-section {
+      background-color: #ffffff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .gallery-section h2 {
+      font-size: 2rem;
+      color: #2d6a4f;
+      margin-bottom: 2rem;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .gallery-item {
+      background: #f9f9f9;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 280px;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+    .gallery-item img {
+      width: 100%;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+    .gallery-item p {
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -97,6 +133,28 @@
       sensibilidad artística, y cada proyecto es pensado en armonía con el entorno. Trabajamos en colaboración con técnicos especializados en
       construcción, priorizando siempre la sustentabilidad y el respeto por la biodiversidad.
     </p>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Galería de Proyectos</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2020/06/08/12/41/swimming-pool-5275931_1280.jpg" alt="Pileta">
+        <p>Piletas integradas al entorno natural: diseño, frescura y armonía.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2021/05/24/12/26/pergola-6278465_1280.jpg" alt="Pérgola">
+        <p>Pérgolas de madera que brindan sombra, calidez y estilo.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2020/09/13/21/15/firepit-5569331_1280.jpg" alt="Fogón">
+        <p>Fogones para reuniones acogedoras bajo las estrellas.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2020/04/30/13/39/garden-5111455_1280.jpg" alt="Jardín zen">
+        <p>Jardines zen que invitan a la meditación y la calma interior.</p>
+      </div>
+    </div>
   </section>
 
   <section class="contact-section">
