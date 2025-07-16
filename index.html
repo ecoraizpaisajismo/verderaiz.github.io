@@ -126,6 +126,26 @@
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+    .footer {
+      background-color: #9bb89c;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -136,6 +156,7 @@
     Tu navegador no soporta el elemento de audio.
   </audio>
   <button id="mute-button">🔇</button>
+  <a class="floating-whatsapp" href="https://wa.me/541134590986" target="_blank" title="Escribinos por WhatsApp">📱</a>
   <script>
     const audio = document.getElementById('bg-audio');
     const muteBtn = document.getElementById('mute-button');
@@ -163,7 +184,8 @@
     <p>
       El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.<br>
       Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.<br>
-      Brindamos soluciones.
+      Brindamos soluciones.<br>
+      <strong>Teléfono de contacto: 1134590986</strong>
     </p>
   </section>
 
@@ -205,14 +227,29 @@
       <input type="text" placeholder="Nombre completo" required>
       <input type="email" placeholder="Correo electrónico" required>
       <input type="tel" placeholder="Teléfono (Ej: 1134590986)" required>
-      <select>
-        <option value="consulta">Tipo de consulta</option>
-        <option value="cliente">Cliente actual</option>
-        <option value="interesado">Interesado/a en servicios</option>
+      <select required>
+        <option value="" disabled selected>Tipo de consulta</option>
+        <option value="cliente">Ya soy cliente</option>
+        <option value="pileta">Asesoramiento sobre pileta</option>
+        <option value="pergola">Asesoramiento sobre pérgola</option>
+        <option value="interior">Diseño de jardín interior</option>
+        <option value="recreacion">Espacio para recreación de niños</option>
+        <option value="balcon">Terraza o balcón</option>
+        <option value="renovacion">Renovación de espacio existente</option>
+        <option value="arquitecto">Soy arquitecto/a o diseñador/a</option>
+        <option value="obra">Estoy en obra</option>
+        <option value="barrio">Vivo en barrio cerrado o Nordelta</option>
+        <option value="casa">Casa particular</option>
+        <option value="departamento">Departamento</option>
       </select>
       <textarea rows="4" placeholder="Mensaje adicional..."></textarea>
       <button type="submit">Enviar consulta</button>
     </form>
   </section>
+
+  <div class="footer">
+    Verde Raíz © 2025 - Todos los derechos reservados
+  </div>
 </body>
 </html>
+Actualización completa: sonido, formulario, contacto
