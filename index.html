@@ -159,22 +159,32 @@
   <a class="floating-whatsapp" href="https://wa.me/541134590986" target="_blank" title="Escribinos por WhatsApp">📱</a>
   <script>
     const audio = document.getElementById('bg-audio');
-  <audio id="bg-audio" autoplay loop>
-  <source src="https://cdn.pixabay.com/download/audio/2023/05/20/audio_7bdfcdf55d.mp3?filename=aves-en-primavera-14657.mp3" type="audio/mpeg">
+<audio id="bg-audio" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2023/05/20/audio_7bdfcdf55d.mp3?filename=birds-in-spring-14657.mp3" type="audio/mpeg">
   Tu navegador no soporta el elemento de audio.
 </audio>
 <button id="mute-button">🔇</button>
 <script>
   const audio = document.getElementById('bg-audio');
   const muteBtn = document.getElementById('mute-button');
-  audio.volume = 0;
-  const fadeIn = setInterval(() => {
-    if (audio.volume < 1) {
-      audio.volume = Math.min(1, audio.volume + 0.05);
-    } else {
-      clearInterval(fadeIn);
+
+  // Requiere interacción del usuario
+  let hasPlayed = false;
+
+  document.addEventListener('click', () => {
+    if (!hasPlayed) {
+      audio.volume = 0;
+      audio.play();
+      const fadeIn = setInterval(() => {
+        if (audio.volume < 1) {
+          audio.volume = Math.min(1, audio.volume + 0.05);
+        } else {
+          clearInterval(fadeIn);
+        }
+      }, 250);
+      hasPlayed = true;
     }
-  }, 250);
+  });
 
   muteBtn.onclick = () => {
     if (audio.muted) {
@@ -186,5 +196,4 @@
     }
   }
 </script>
-
-   
+ 
