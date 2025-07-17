@@ -131,33 +131,110 @@
   <header>Verde Raíz</header>
 
   <!-- Sonido ambiental -->
-  <audio id="bg-audio" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/08/30/audio_66e4ff00a8.mp3?filename=peaceful-forest-soundscape-148857.mp3" type="audio/mpeg">
-    Tu navegador no soporta el elemento de audio.
-  </audio>
-  <button id="mute-button">🔇</button>
-  <script>
-    const audio = document.getElementById('bg-audio');
-    const muteBtn = document.getElementById('mute-button');
-    audio.volume = 0;
-    const fadeIn = setInterval(() => {
-      if (audio.volume < 1) {
-        audio.volume = Math.min(1, audio.volume + 0.05);
-      } else {
-        clearInterval(fadeIn);
-      }
-    }, 250);
+ <!-- Desde aquí -->
+<audio id="bg-audio" loop>
+  <source src="verde_raiz_sonido_ambiental_real.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+<button id="mute-button">🔈</button>
 
-    muteBtn.onclick = () => {
-      if (audio.muted) {
-        audio.muted = false;
-        muteBtn.textContent = '🔇';
-      } else {
-        audio.muted = true;
-        muteBtn.textContent = '🔊';
-      }
-    };
-  </script>
+<script>
+  const audio = document.getElementById('bg-audio');
+  const muteBtn = document.getElementById('mute-button');
+  audio.volume = 0;
+  audio.play().catch(()=>{});
+  const fadeIn = setInterval(()=>{
+    if(audio.volume < 1) audio.volume = Math.min(1, audio.volume + 0.05);
+    else clearInterval(fadeIn);
+  },250);
+  muteBtn.onclick = () => {
+    audio.muted = !audio.muted;
+    muteBtn.textContent = audio.muted ? '🔇' : '🔈';
+  };
+</script>
+
+<!-- Botón WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/541134590986" target="_blank" title="Escribinos por WhatsApp">💬</a>
+
+<!-- Galería de Proyectos -->
+<section class="gallery">
+  <h2>Galería de Proyectos</h2>
+  <div class="cards">
+    <div class="card"><img src="pilata_1.jpg" alt="Pileta"><p>Piletas integradas al entorno natural.</p></div>
+    <div class="card"><img src="pérgola_1.jpg" alt="Pérgola"><p>Pérgolas de madera que brindan sombra y estilo.</p></div>
+    <div class="card"><img src="fogón_1.jpg" alt="Fogón"><p>Fogones para reuniones acogedoras.</p></div>
+    <div class="card"><img src="jardín_1.jpg" alt="Jardín zen"><p>Jardines zen que invitan a la calma.</p></div>
+  </div>
+</section>
+
+<!-- Formulario -->
+<section id="contacto">
+  <h2>Formulario de Contacto</h2>
+  <form action="https://formsubmit.co/ventas@ecoraiz.com.ar" method="POST">
+    <input type="text" name="Nombre" placeholder="Nombre completo" required>
+    <input type="email" name="Email" placeholder="Correo electrónico" required>
+    <input type="tel" name="Telefono" placeholder="Teléfono (Ej: 1134590986)" required>
+    <select name="ConsultaTipo" required>
+      <option value="" disabled selected>Tipo de consulta</option>
+      <option>Cliente actual</option>
+      <option>Profesional (arquitecto, diseño)</option>
+      <option>Nueva consulta residencial</option>
+    </select>
+    <select name="ServicioSolicitado" required>
+      <option value="" disabled selected>Servicio solicitado</option>
+      <option>Pileta</option>
+      <option>Pérgola</option>
+      <option>Huerto / Hortaliza</option>
+      <option>Jardín interior</option>
+      <option>Espacio recreación niños</option>
+    </select>
+    <textarea name="Mensaje" placeholder="Mensaje adicional..."></textarea>
+    <button type="submit">Enviar consulta</button>
+  </form>
+</section>
+
+<!-- Efemérides -->
+<section class="efemerides">
+  <h2>Efemérides de la Naturaleza</h2>
+  <ul>
+    <li>22 de abril: Día de la Tierra</li>
+    <li>5 de junio: Día Mundial del Medio Ambiente</li>
+    <li>14 de febrero: Día de la Mariposa</li>
+    <li>16 de junio: Día de los Polinizadores</li>
+    <li>1 de julio: Día del Arquitecto</li>
+    <li>4 de agosto: Día del Paisajista</li>
+    <li>15 de octubre: Día del Jardinero</li>
+    <li>11 de septiembre: Día del Maestro</li>
+    <li>25 de mayo: Día de la Patria</li>
+    <li>20 de junio: Día de la Bandera</li>
+    <li>9 de julio: Día de la Independencia</li>
+    <li>21 de marzo: Otoño 🍂</li>
+    <li>21 de junio: Invierno ❄️</li>
+    <li>21 de septiembre: Primavera 🌸</li>
+    <li>21 de diciembre: Verano ☀️</li>
+    <li>12 de octubre: Diversidad Cultural</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Verde Raíz © 2025 - Todos los derechos reservados</p>
+</footer>
+
+<style>
+  /* Estilos para botones e imágenes */
+  #mute-button { position: fixed; bottom: 80px; right: 20px; font-size:24px; background:none;border:none; cursor:pointer; }
+  .whatsapp-float { position: fixed; bottom: 20px; right: 20px; font-size:32px; text-decoration:none; }
+  .gallery .cards { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+  .card { background:#fff; padding:10px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); text-align:center; width:200px; }
+  .card img { width:100%; height:auto; border-radius:4px; }
+  form { display:flex; flex-direction:column; gap:8px; width:90%; max-width:400px; margin:auto; }
+  input, select, textarea { padding:8px; border:1px solid #ccc; border-radius:4px; }
+  button[type="submit"] { padding:10px; background:#4C7740; color:#fff; border:none; cursor:pointer; border-radius:4px; }
+  .efemerides ul { list-style:none; padding:0; max-width:600px; margin:auto; }
+  .efemerides li { margin:4px 0; }
+  footer { text-align:center; padding:10px; background:#eaf4ea; }
+</style>
+<!-- Hasta aquí -->
 
   <section class="intro">
     <p>
