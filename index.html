@@ -14,61 +14,46 @@
             color: #2c4a2d;
             text-align: center;
         }
-        header {
-            padding: 1.5em;
+        .header {
+            padding: 2rem 1rem 0.5rem;
         }
-        h1 {
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
+        .intro {
             max-width: 800px;
-            margin: auto;
+            margin: 0 auto 2rem;
         }
-        .section {
+        .galeria {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            margin-top: 2em;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
         }
-        .box {
-            margin: 1em;
-            padding: 1em;
-            background-color: #ffffffbb;
+        .galeria img {
+            width: 250px;
+            height: 170px;
+            object-fit: cover;
             border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 220px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-        audio {
-            display: block;
-            margin: 20px auto;
+        .galeria img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <header>
+    <div class="header">
         <h1>EcoRaíz Paisajismo</h1>
-        <p>El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos. Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.</p>
-    </header>
-
-    <div class="section">
-        <div class="box">
-            <h3>🌿 Jardín abierto</h3>
-            <p>Diseños verdes personalizados</p>
-        </div>
-        <div class="box">
-            <h3>🏡 Pileta con jardín</h3>
-            <p>Pileta integrada al paisaje</p>
-        </div>
-        <div class="box">
-            <h3>🔥 Energía natural</h3>
-            <p>Espacios para el disfrute y descanso</p>
-        </div>
+        <p class="intro">
+            El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.
+            Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.
+        </p>
     </div>
-
-    <audio autoplay loop>
-        <source src="verde_raiz_sonido_ambiental_real.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-    </audio>
+    <div class="galeria">
+        <img src="jardin_1.jpg" alt="Jardín">
+        <img src="fogon_1.jpg" alt="Fogón">
+        <img src="pilata_1.jpg" alt="Pileta">
+        <img src="pergola_1.jpg" alt="Pérgola">
+    </div>
 </body>
 </html>
