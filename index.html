@@ -1,134 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verde Raíz</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #eaf4ea;
-            color: #333;
-        }
-        .hero {
-            height: 100vh;
-            background: url('hojas_con_gotas.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            color: white;
-        }
-        .info {
-            padding: 2rem;
-            text-align: center;
-            background-color: #e0ece0;
-        }
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            padding: 1rem;
-            background-color: #f3fdf3;
-        }
-        .gallery img {
-            width: 30%;
-            border-radius: 12px;
-        }
-        .footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #d8e9d8;
-            font-style: italic;
-        }
-        .formulario {
-            padding: 2rem;
-            background-color: #f4fdf4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .formulario label, .formulario select, .formulario input, .formulario textarea, .formulario button {
-            margin: 0.5rem 0;
-            width: 80%;
-            max-width: 500px;
-        }
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verde Raíz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf4ea;
+      color: #333;
+    }
+    .hero {
+      height: 100vh;
+      background: url('./hojas_con_gotas.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+    }
+    .info {
+      padding: 2rem;
+      text-align: center;
+      background-color: #e0ece0;
+    }
+    .gallery {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+      background-color: #f3fdf3;
+    }
+    .gallery img {
+      width: 30%;
+      border-radius: 12px;
+    }
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #d8e9d8;
+      font-style: italic;
+    }
+    .formulario {
+      padding: 2rem;
+      background-color: #f4fdf4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .formulario label, .formulario select, .formulario input, .formulario textarea, .formulario button {
+      margin: 0.5rem 0;
+      width: 80%;
+      max-width: 500px;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="hero">
-        <div>
-            <h1>Verde Raíz</h1>
-            <p>El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.<br>
-            Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.<br><br>
-            Brindamos soluciones.</p>
-        </div>
+  <div class="hero">
+    <div>
+      <h1>Verde Raíz</h1>
+      <p>
+        El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.<br>
+        Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.<br><br>
+        Brindamos soluciones.
+      </p>
     </div>
+  </div>
 
-    <div class="gallery">
-        <img src="sendero_hojas.jpg" alt="Sendero natural" />
-        <img src="fogon.jpg" alt="Fogón de diseño" />
-        <img src="pergola.jpg" alt="Pérgola natural" />
-    </div>
+  <div class="gallery">
+    <img src="./sendero_hojas.jpg" alt="Sendero natural" />
+    <img src="./fogon.jpg" alt="Fogón de diseño" />
+    <img src="./pergola.jpg" alt="Pérgola natural" />
+  </div>
 
-    <div class="formulario">
-        <h2>Formulario de Contacto</h2>
-        <form>
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required />
+  <div class="formulario">
+    <h2>Formulario de Contacto</h2>
+    <form>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required />
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required />
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="1134590986" />
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="1134590986" />
 
-            <label for="tipo">Tipo de consulta:</label>
-            <select id="tipo" name="tipo">
-                <option value="cliente">Cliente actual</option>
-                <option value="profesional">Estudio de arquitectura o diseño</option>
-                <option value="obra">Obra en curso</option>
-                <option value="hogar">Casa / Departamento</option>
-                <option value="barrio">Barrio cerrado</option>
-            </select>
+      <label for="tipo">Tipo de consulta:</label>
+      <select id="tipo" name="tipo">
+        <option value="cliente">Cliente actual</option>
+        <option value="profesional">Estudio de arquitectura o diseño</option>
+        <option value="obra">Obra en curso</option>
+        <option value="hogar">Casa / Departamento</option>
+        <option value="barrio">Barrio cerrado</option>
+      </select>
 
-            <label for="servicio">Servicio solicitado:</label>
-            <select id="servicio" name="servicio">
-                <option value="pileta">Pileta</option>
-                <option value="pergola">Pérgola</option>
-                <option value="jardin">Jardín</option>
-                <option value="interiores">Interiores</option>
-                <option value="recreacion">Espacio de recreación infantil</option>
-            </select>
+      <label for="servicio">Servicio solicitado:</label>
+      <select id="servicio" name="servicio">
+        <option value="pileta">Pileta</option>
+        <option value="pergola">Pérgola</option>
+        <option value="jardin">Jardín</option>
+        <option value="interiores">Interiores</option>
+        <option value="recreacion">Espacio de recreación infantil</option>
+      </select>
 
-            <label for="mensaje">Mensaje adicional:</label>
-            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+      <label for="mensaje">Mensaje adicional:</label>
+      <textarea id="mensaje" name="mensaje" rows="4"></textarea>
 
-            <button type="submit">Enviar consulta</button>
-        </form>
-    </div>
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </div>
 
-    <a class="whatsapp-btn" href="https://wa.me/541134590986" target="_blank" title="Enviar mensaje por WhatsApp">📱</a>
+  <a class="whatsapp-btn" href="https://wa.me/541134590986" target="_blank" title="Enviar mensaje por WhatsApp">📱</a>
 
-    <div class="footer">
-        <p>“Los suelos son la piel de nuestro planeta… cuidémoslos.”</p>
-    </div>
+  <div class="footer">
+    <p>“Los suelos son la piel de nuestro planeta… cuidémoslos.”</p>
+  </div>
 </body>
 </html>
