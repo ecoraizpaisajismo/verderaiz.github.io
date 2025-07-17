@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verde Raíz</title>
   <style>
     body {
-      background-color: #e7f5e6;
-      color: #1a3d1a;
-      font-family: Arial, sans-serif;
+      background-color: #e7f5dc;
+      color: #234f1d;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
     }
+
     header {
-      background-color: #8fbc8f;
+      background-color: #b7dfa6;
       text-align: center;
       padding: 1rem;
       font-size: 1.8rem;
       font-weight: bold;
     }
+
+    .intro {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
     #mute-button {
       position: fixed;
       bottom: 15px;
-      left: 15px;
-      font-size: 1.5rem;
-      background: none;
+      right: 15px;
+      background-color: #d6f5d6;
       border: none;
+      font-size: 1.5rem;
+      padding: 10px;
+      border-radius: 50%;
       cursor: pointer;
     }
   </style>
@@ -35,17 +49,15 @@
 
   <!-- Sonido ambiental -->
   <audio id="bg-audio" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/08/30/audio_66e4ff00a8.mp3?filename=peaceful-forest-soundscape-148857.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2023/08/20/audio_66eff00a8.mp3?filename=peaceful-forest-soundscape-148857.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
   </audio>
-
   <button id="mute-button">🔊</button>
 
   <script>
     const audio = document.getElementById('bg-audio');
     const muteBtn = document.getElementById('mute-button');
     audio.volume = 0;
-
     const fadeIn = setInterval(() => {
       if (audio.volume < 1) {
         audio.volume = Math.min(1, audio.volume + 0.05);
@@ -55,9 +67,21 @@
     }, 250);
 
     muteBtn.onclick = () => {
-      audio.muted = !audio.muted;
-      muteBtn.textContent = audio.muted ? '🔇' : '🔊';
+      if (audio.muted) {
+        audio.muted = false;
+        muteBtn.textContent = '🔊';
+      } else {
+        audio.muted = true;
+        muteBtn.textContent = '🔇';
+      }
     };
   </script>
+
+  <section class="intro">
+    <p>
+      El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos. <br>
+      Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.
+    </p>
+  </section>
 </body>
 </html>
