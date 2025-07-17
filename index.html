@@ -18,17 +18,17 @@
       font-size: 2rem;
       font-weight: bold;
     }
-    .intro {
-      background-color: #c9d9cd;
+    .intro, .who-we-are, .contact-section {
       padding: 2rem;
       text-align: center;
+    }
+    .intro {
+      background-color: #c9d9cd;
       font-size: 1.2rem;
       color: #333;
     }
     .who-we-are {
       background-color: #f1f9f0;
-      padding: 2rem;
-      text-align: center;
     }
     .who-we-are h2 {
       font-size: 1.8rem;
@@ -80,10 +80,139 @@
     }
     .contact-section {
       background-color: #e9f3e4;
-      padding: 2rem;
-      text-align: center;
     }
     .contact-section h2 {
-      margin-bottom: 1rem;
       font-size: 1.6rem;
-      color:
+      color: #5a7d5a;
+      margin-bottom: 1rem;
+    }
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea, select {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    button {
+      background-color: #5a7d5a;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #4c6f4c;
+    }
+    #mute-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #5a7d5a;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header>Verde Raíz</header>
+
+  <!-- Sonido ambiental -->
+  <audio id="bg-audio" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/08/30/audio_66e4ff00a8.mp3?filename=peaceful-forest-soundscape-148857.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <button id="mute-button">🔇</button>
+  <script>
+    const audio = document.getElementById('bg-audio');
+    const muteBtn = document.getElementById('mute-button');
+    audio.volume = 0;
+    const fadeIn = setInterval(() => {
+      if (audio.volume < 1) {
+        audio.volume = Math.min(1, audio.volume + 0.05);
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 250);
+
+    muteBtn.onclick = () => {
+      if (audio.muted) {
+        audio.muted = false;
+        muteBtn.textContent = '🔇';
+      } else {
+        audio.muted = true;
+        muteBtn.textContent = '🔊';
+      }
+    };
+  </script>
+
+  <section class="intro">
+    <p>
+      El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.<br>
+      Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.<br>
+      Brindamos soluciones.
+    </p>
+  </section>
+
+  <section class="who-we-are">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Somos un equipo de profesionales apasionados por la naturaleza, el diseño y la funcionalidad. Diseñamos y ejecutamos espacios personalizados
+      con identidad propia: jardines, huertas, piletas, pérgolas, fogones, rincones de descanso y más. Nuestra visión integra saberes técnicos con
+      sensibilidad artística, y cada proyecto es pensado en armonía con el entorno. Trabajamos en colaboración con técnicos especializados en
+      construcción, priorizando siempre la sustentabilidad y el respeto por la biodiversidad.
+    </p>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Galería de Proyectos</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2020/06/08/12/41/swimming-pool-5275931_1280.jpg" alt="Pileta">
+        <p>Piletas integradas al entorno natural: diseño, frescura y armonía.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2021/05/24/12/26/pergola-6278465_1280.jpg" alt="Pérgola">
+        <p>Pérgolas de madera que brindan sombra, calidez y estilo.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2020/09/13/21/15/firepit-5569331_1280.jpg" alt="Fogón">
+        <p>Fogones para reuniones acogedoras bajo las estrellas.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.pixabay.com/photo/2020/04/30/13/39/garden-5111455_1280.jpg" alt="Jardín zen">
+        <p>Jardines zen que invitan a la meditación y la calma interior.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <h2>Formulario de Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="tel" placeholder="Teléfono (Ej: 1134590986)" required>
+      <select>
+        <option value="consulta">Tipo de consulta</option>
+        <option value="cliente">Cliente actual</option>
+        <option value="interesado">Interesado/a en servicios</option>
+      </select>
+      <textarea rows="4" placeholder="Mensaje adicional..."></textarea>
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </section>
+</body>
+</html>
