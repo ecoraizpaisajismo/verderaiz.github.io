@@ -38,11 +38,18 @@
   <br><br>
   <p><strong>Diseños verdes personalizados • Piletas integradas al paisaje • Espacios para el descanso y disfrute</strong></p>
 
-  <audio id="bg-audio" autoplay loop>
-    <source src="verde_raiz_sonido_ambiental_real.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5.
-  </audio>
+ <audio id="bg-audio" autoplay loop>
+  <source src="verde_raiz_sonido_ambiental_real.mp3" type="audio/mpeg">
+  Tu navegador no soporta el audio.
+</audio>
 
-</body>
-</html>
-BORRADO DE CACHE Y ACTUALIZADO 
+<script>
+  window.addEventListener('load', function () {
+    const audio = document.getElementById('bg-audio');
+    if (audio) {
+      audio.volume = 0.4;
+      audio.play().catch(() => {});
+    }
+  });
+</script>
+PRUEBA DE AUDIO
