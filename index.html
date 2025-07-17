@@ -159,97 +159,32 @@
   <a class="floating-whatsapp" href="https://wa.me/541134590986" target="_blank" title="Escribinos por WhatsApp">📱</a>
   <script>
     const audio = document.getElementById('bg-audio');
-    const muteBtn = document.getElementById('mute-button');
-    audio.volume = 0;
-    const fadeIn = setInterval(() => {
-      if (audio.volume < 1) {
-        audio.volume = Math.min(1, audio.volume + 0.05);
-      } else {
-        clearInterval(fadeIn);
-      }
-    }, 250);
-
-    muteBtn.onclick = () => {
-      if (audio.muted) {
-        audio.muted = false;
-        muteBtn.textContent = '🔇';
-      } else {
-        audio.muted = true;
-        muteBtn.textContent = '🔊';
-      }
+  <audio id="bg-audio" autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2023/05/20/audio_7bdfcdf55d.mp3?filename=aves-en-primavera-14657.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+<button id="mute-button">🔇</button>
+<script>
+  const audio = document.getElementById('bg-audio');
+  const muteBtn = document.getElementById('mute-button');
+  audio.volume = 0;
+  const fadeIn = setInterval(() => {
+    if (audio.volume < 1) {
+      audio.volume = Math.min(1, audio.volume + 0.05);
+    } else {
+      clearInterval(fadeIn);
     }
-  </script>
+  }, 250);
 
-  <section class="intro">
-    <p>
-      El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.<br>
-      Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.<br>
-      Brindamos soluciones.<br>
-      <strong>Teléfono de contacto: 1134590986</strong>
-    </p>
-  </section>
+  muteBtn.onclick = () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteBtn.textContent = '🔇';
+    } else {
+      audio.muted = true;
+      muteBtn.textContent = '🔊';
+    }
+  }
+</script>
 
-  <section class="who-we-are">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      Somos un equipo de profesionales apasionados por la naturaleza, el diseño y la funcionalidad. Diseñamos y ejecutamos espacios personalizados
-      con identidad propia: jardines, huertas, piletas, pérgolas, fogones, rincones de descanso y más. Nuestra visión integra saberes técnicos con
-      sensibilidad artística, y cada proyecto es pensado en armonía con el entorno. Trabajamos en colaboración con técnicos especializados en
-      construcción, priorizando siempre la sustentabilidad y el respeto por la biodiversidad.
-    </p>
-  </section>
-
-  <section class="gallery-section">
-    <h2>Galería de Proyectos</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2020/06/08/12/41/swimming-pool-5275931_1280.jpg" alt="Pileta">
-        <p>Piletas integradas al entorno natural: diseño, frescura y armonía.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2021/05/24/12/26/pergola-6278465_1280.jpg" alt="Pérgola">
-        <p>Pérgolas de madera que brindan sombra, calidez y estilo.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2020/09/13/21/15/firepit-5569331_1280.jpg" alt="Fogón">
-        <p>Fogones para reuniones acogedoras bajo las estrellas.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2020/04/30/13/39/garden-5111455_1280.jpg" alt="Jardín zen">
-        <p>Jardines zen que invitan a la meditación y la calma interior.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section">
-    <h2>Formulario de Contacto</h2>
-    <form>
-      <input type="text" placeholder="Nombre completo" required>
-      <input type="email" placeholder="Correo electrónico" required>
-      <input type="tel" placeholder="Teléfono (Ej: 1134590986)" required>
-      <select required>
-        <option value="" disabled selected>Tipo de consulta</option>
-        <option value="cliente">Ya soy cliente</option>
-        <option value="pileta">Asesoramiento sobre pileta</option>
-        <option value="pergola">Asesoramiento sobre pérgola</option>
-        <option value="interior">Diseño de jardín interior</option>
-        <option value="recreacion">Espacio para recreación de niños</option>
-        <option value="balcon">Terraza o balcón</option>
-        <option value="renovacion">Renovación de espacio existente</option>
-        <option value="arquitecto">Soy arquitecto/a o diseñador/a</option>
-        <option value="obra">Estoy en obra</option>
-        <option value="barrio">Vivo en barrio cerrado o Nordelta</option>
-        <option value="casa">Casa particular</option>
-        <option value="departamento">Departamento</option>
-      </select>
-      <textarea rows="4" placeholder="Mensaje adicional..."></textarea>
-      <button type="submit">Enviar consulta</button>
-    </form>
-  </section>
-
-  <div class="footer">
-    Verde Raíz © 2025 - Todos los derechos reservados
-  </div>
-</body>
-</html>
-
+   
