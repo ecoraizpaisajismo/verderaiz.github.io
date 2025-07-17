@@ -1,129 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verde Raíz</title>
   <style>
     body {
+      background-color: #e7f5e6;
+      color: #1a3d1a;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #eaf4ea;
+      padding: 0;
     }
     header {
-      background-color: #9bb89c;
-      padding: 1.5rem;
+      background-color: #8fbc8f;
       text-align: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .intro, .who-we-are, .contact-section {
-      padding: 2rem;
-      text-align: center;
-    }
-    .intro {
-      background-color: #c9d9cd;
-      font-size: 1.2rem;
-      color: #333;
-    }
-    .who-we-are {
-      background-color: #f1f9f0;
-    }
-    .who-we-are h2 {
-      font-size: 1.8rem;
-      color: #486a48;
-    }
-    .who-we-are p {
-      font-size: 1.1rem;
-      margin-top: 1rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #333;
-    }
-    .gallery-section {
-      background-color: #ffffff;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    .gallery-section h2 {
-      font-size: 2rem;
-      color: #2d6a4f;
-      margin-bottom: 2rem;
-    }
-    .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .gallery-item {
-      background: #f9f9f9;
-      border-radius: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 280px;
-      transition: transform 0.3s;
-    }
-    .gallery-item:hover {
-      transform: scale(1.03);
-    }
-    .gallery-item img {
-      width: 100%;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-    }
-    .gallery-item p {
       padding: 1rem;
-      font-size: 0.95rem;
-      color: #333;
-    }
-    .contact-section {
-      background-color: #e9f3e4;
-    }
-    .contact-section h2 {
-      font-size: 1.6rem;
-      color: #5a7d5a;
-      margin-bottom: 1rem;
-    }
-    form {
-      max-width: 700px;
-      margin: 0 auto;
-      display: grid;
-      gap: 1rem;
-    }
-    input, textarea, select {
-      padding: 0.8rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      width: 100%;
-    }
-    button {
-      background-color: #5a7d5a;
-      color: white;
-      border: none;
-      padding: 0.8rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #4c6f4c;
+      font-size: 1.8rem;
+      font-weight: bold;
     }
     #mute-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #5a7d5a;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      bottom: 15px;
+      left: 15px;
       font-size: 1.5rem;
+      background: none;
+      border: none;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
     }
   </style>
 </head>
@@ -131,165 +34,30 @@
   <header>Verde Raíz</header>
 
   <!-- Sonido ambiental -->
- <!-- Desde aquí -->
-<audio id="bg-audio" loop>
-  <source src="verde_raiz_sonido_ambiental_real.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio.
-</audio>
-<button id="mute-button">🔈</button>
+  <audio id="bg-audio" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/08/30/audio_66e4ff00a8.mp3?filename=peaceful-forest-soundscape-148857.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
 
-<script>
-  const audio = document.getElementById('bg-audio');
-  const muteBtn = document.getElementById('mute-button');
-  audio.volume = 0;
-  audio.play().catch(()=>{});
-  const fadeIn = setInterval(()=>{
-    if(audio.volume < 1) audio.volume = Math.min(1, audio.volume + 0.05);
-    else clearInterval(fadeIn);
-  },250);
-  muteBtn.onclick = () => {
-    audio.muted = !audio.muted;
-    muteBtn.textContent = audio.muted ? '🔇' : '🔈';
-  };
-</script>
+  <button id="mute-button">🔊</button>
 
-<!-- Botón WhatsApp -->
-<a class="whatsapp-float" href="https://wa.me/541134590986" target="_blank" title="Escribinos por WhatsApp">💬</a>
+  <script>
+    const audio = document.getElementById('bg-audio');
+    const muteBtn = document.getElementById('mute-button');
+    audio.volume = 0;
 
-<!-- Galería de Proyectos -->
-<section class="gallery">
-  <h2>Galería de Proyectos</h2>
-  <div class="cards">
-    <div class="card"><img src="pilata_1.jpg" alt="Pileta"><p>Piletas integradas al entorno natural.</p></div>
-    <div class="card"><img src="pérgola_1.jpg" alt="Pérgola"><p>Pérgolas de madera que brindan sombra y estilo.</p></div>
-    <div class="card"><img src="fogón_1.jpg" alt="Fogón"><p>Fogones para reuniones acogedoras.</p></div>
-    <div class="card"><img src="jardín_1.jpg" alt="Jardín zen"><p>Jardines zen que invitan a la calma.</p></div>
-  </div>
-</section>
+    const fadeIn = setInterval(() => {
+      if (audio.volume < 1) {
+        audio.volume = Math.min(1, audio.volume + 0.05);
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 250);
 
-<!-- Formulario -->
-<section id="contacto">
-  <h2>Formulario de Contacto</h2>
-  <form action="https://formsubmit.co/ventas@ecoraiz.com.ar" method="POST">
-    <input type="text" name="Nombre" placeholder="Nombre completo" required>
-    <input type="email" name="Email" placeholder="Correo electrónico" required>
-    <input type="tel" name="Telefono" placeholder="Teléfono (Ej: 1134590986)" required>
-    <select name="ConsultaTipo" required>
-      <option value="" disabled selected>Tipo de consulta</option>
-      <option>Cliente actual</option>
-      <option>Profesional (arquitecto, diseño)</option>
-      <option>Nueva consulta residencial</option>
-    </select>
-    <select name="ServicioSolicitado" required>
-      <option value="" disabled selected>Servicio solicitado</option>
-      <option>Pileta</option>
-      <option>Pérgola</option>
-      <option>Huerto / Hortaliza</option>
-      <option>Jardín interior</option>
-      <option>Espacio recreación niños</option>
-    </select>
-    <textarea name="Mensaje" placeholder="Mensaje adicional..."></textarea>
-    <button type="submit">Enviar consulta</button>
-  </form>
-</section>
-
-<!-- Efemérides -->
-<section class="efemerides">
-  <h2>Efemérides de la Naturaleza</h2>
-  <ul>
-    <li>22 de abril: Día de la Tierra</li>
-    <li>5 de junio: Día Mundial del Medio Ambiente</li>
-    <li>14 de febrero: Día de la Mariposa</li>
-    <li>16 de junio: Día de los Polinizadores</li>
-    <li>1 de julio: Día del Arquitecto</li>
-    <li>4 de agosto: Día del Paisajista</li>
-    <li>15 de octubre: Día del Jardinero</li>
-    <li>11 de septiembre: Día del Maestro</li>
-    <li>25 de mayo: Día de la Patria</li>
-    <li>20 de junio: Día de la Bandera</li>
-    <li>9 de julio: Día de la Independencia</li>
-    <li>21 de marzo: Otoño 🍂</li>
-    <li>21 de junio: Invierno ❄️</li>
-    <li>21 de septiembre: Primavera 🌸</li>
-    <li>21 de diciembre: Verano ☀️</li>
-    <li>12 de octubre: Diversidad Cultural</li>
-  </ul>
-</section>
-
-<footer>
-  <p>Verde Raíz © 2025 - Todos los derechos reservados</p>
-</footer>
-
-<style>
-  /* Estilos para botones e imágenes */
-  #mute-button { position: fixed; bottom: 80px; right: 20px; font-size:24px; background:none;border:none; cursor:pointer; }
-  .whatsapp-float { position: fixed; bottom: 20px; right: 20px; font-size:32px; text-decoration:none; }
-  .gallery .cards { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
-  .card { background:#fff; padding:10px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); text-align:center; width:200px; }
-  .card img { width:100%; height:auto; border-radius:4px; }
-  form { display:flex; flex-direction:column; gap:8px; width:90%; max-width:400px; margin:auto; }
-  input, select, textarea { padding:8px; border:1px solid #ccc; border-radius:4px; }
-  button[type="submit"] { padding:10px; background:#4C7740; color:#fff; border:none; cursor:pointer; border-radius:4px; }
-  .efemerides ul { list-style:none; padding:0; max-width:600px; margin:auto; }
-  .efemerides li { margin:4px 0; }
-  footer { text-align:center; padding:10px; background:#eaf4ea; }
-</style>
-<!-- Hasta aquí -->
-
-  <section class="intro">
-    <p>
-      El paisajismo combina arte, diseño y conocimientos técnicos para crear espacios exteriores e interiores funcionales y estéticamente armoniosos.<br>
-      Priorizamos la sustentabilidad y la biodiversidad ambiental respetando nuestro ecosistema natural.<br>
-      Brindamos soluciones.
-    </p>
-  </section>
-
-  <section class="who-we-are">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      Somos un equipo de profesionales apasionados por la naturaleza, el diseño y la funcionalidad. Diseñamos y ejecutamos espacios personalizados
-      con identidad propia: jardines, huertas, piletas, pérgolas, fogones, rincones de descanso y más. Nuestra visión integra saberes técnicos con
-      sensibilidad artística, y cada proyecto es pensado en armonía con el entorno. Trabajamos en colaboración con técnicos especializados en
-      construcción, priorizando siempre la sustentabilidad y el respeto por la biodiversidad.
-    </p>
-  </section>
-
-  <section class="gallery-section">
-    <h2>Galería de Proyectos</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2020/06/08/12/41/swimming-pool-5275931_1280.jpg" alt="Pileta">
-        <p>Piletas integradas al entorno natural: diseño, frescura y armonía.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2021/05/24/12/26/pergola-6278465_1280.jpg" alt="Pérgola">
-        <p>Pérgolas de madera que brindan sombra, calidez y estilo.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2020/09/13/21/15/firepit-5569331_1280.jpg" alt="Fogón">
-        <p>Fogones para reuniones acogedoras bajo las estrellas.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn.pixabay.com/photo/2020/04/30/13/39/garden-5111455_1280.jpg" alt="Jardín zen">
-        <p>Jardines zen que invitan a la meditación y la calma interior.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section">
-    <h2>Formulario de Contacto</h2>
-    <form>
-      <input type="text" placeholder="Nombre completo" required>
-      <input type="email" placeholder="Correo electrónico" required>
-      <input type="tel" placeholder="Teléfono (Ej: 1134590986)" required>
-      <select>
-        <option value="consulta">Tipo de consulta</option>
-        <option value="cliente">Cliente actual</option>
-        <option value="interesado">Interesado/a en servicios</option>
-      </select>
-      <textarea rows="4" placeholder="Mensaje adicional..."></textarea>
-      <button type="submit">Enviar consulta</button>
-    </form>
-  </section>
+    muteBtn.onclick = () => {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? '🔇' : '🔊';
+    };
+  </script>
 </body>
 </html>
