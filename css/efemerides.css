@@ -142,3 +142,47 @@
 .bio-card:hover {
   transform: scale(1.015);
 }
+.galeria-bio {
+  padding: 40px 20px;
+  background-color: #f6faf7;
+}
+
+.galeria-bio h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #3a3a3a;
+  font-family: 'Georgia', serif;
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.bio-item {
+  background-color: #e6f2ec;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.bio-item img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.bio-item p {
+  font-style: italic;
+  color: #5a5a5a;
+}
+
+.bio-item:hover {
+  transform: scale(1.02);
+}
