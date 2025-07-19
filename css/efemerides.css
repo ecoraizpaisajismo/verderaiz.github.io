@@ -1,1 +1,38 @@
+/* Estilo general de la sección */
+.efemerides-section {
+  padding: 40px 20px;
+  background-color: #fbfefc;
+}
 
+/* Tarjetas tipo acordeón */
+.efem-card {
+  background-color: #eef5ea;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Georgia', serif;
+  transition: transform 0.3s ease;
+}
+
+.efem-card summary {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a4a4a;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.efem-card p {
+  margin-top: 10px;
+  font-style: italic;
+  color: #5a5a5a;
+}
+
+/* Efecto hover para interacción suave */
+.efem-card:hover {
+  transform: scale(1.02);
+}
