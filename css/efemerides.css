@@ -95,3 +95,50 @@
 .efem-card:hover {
   transform: scale(1.015);
 }
+.biodiversidad-section {
+  padding: 40px 20px;
+  background-color: #f1f8f5;
+}
+
+.biodiversidad-section h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #3a3a3a;
+  font-family: 'Georgia', serif;
+}
+
+.bio-card {
+  background-color: #e6f2ec;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.bio-card summary {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a4a4a;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.bio-card summary::marker {
+  content: '';
+}
+
+.bio-card p {
+  margin-top: 10px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #5a5a5a;
+}
+
+.bio-card:hover {
+  transform: scale(1.015);
+}
