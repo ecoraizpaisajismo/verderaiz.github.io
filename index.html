@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> <link rel="stylesheet" href="css/efemerides.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <link rel="stylesheet" href="css/efemerides.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcoRaíz Paisajismo</title>
   <style>
     body {
@@ -35,109 +36,59 @@
       color: white;
       text-align: center;
       padding: 20px;
+      max-width: 90%;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
     }
 
     .texto-portada h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .texto-portada p {
-      font-size: 1.2em;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
       font-size: 2em;
       margin-bottom: 10px;
     }
 
-    p {
-      text-align: center;
+    .texto-portada p {
       font-size: 1.1em;
-      margin-bottom: 30px;
+      line-height: 1.6;
     }
 
-    .mes {
-      margin-bottom: 30px;
-      border-left: 4px solid #8fbf88;
-      padding-left: 15px;
-    }
+    @media (max-width: 600px) {
+      .texto-portada h1 {
+        font-size: 1.4em;
+      }
 
-    .mes h3 {
-      font-size: 1.5em;
-      color: #5a7d5a;
-    }
-
-    .mes ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .mes li {
-      margin-bottom: 10px;
-      background-color: #eaf3ea;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    #portfolio .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    #portfolio .item {
-      background-color: #ffffff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-      padding: 10px;
-    }
-
-    #portfolio .item img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-
-    #portfolio .item h4 {
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #4a6f4a;
-    }
-
-    #portfolio .item p {
-      font-size: 0.95em;
-      color: #555;
+      .texto-portada p {
+        font-size: 0.95em;
+      }
     }
   </style>
 </head>
-<body>
-<section class="imagen-portada">
-  <img src="images/inicio-paisaje.jpg" alt="Paisaje emocional y diseño sustentable">
-  <div class="portada-texto">
-    <h1>Diseño que celebra la naturaleza</h1>
-  </div>
-</section>
-  
-  <header class="portada">
-    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua">
-    <div class="texto-portada">
-   <section id="presentacion">
 
-    <strong>El paisajismo</strong> combina <em>arte, diseño</em> y <em>conocimientos técnicos</em><br>
-    para crear espacios exteriores e interiores <strong>funcionales</strong> y <strong>armoniosos</strong>.<br>
-    Priorizamos la <span class="verde">sustentabilidad</span> y la <span class="verde">biodiversidad. ambiental</span>,<br>
-    respetando <em>nuestro ecosistema natural</em>.
+<body>
+
+  <!-- Imagen de portada secundaria -->
+  <section class="imagen-portada">
+    <img src="images/inicio-paisaje.jpg" alt="Paisaje emocional y diseño sustentable" />
+    <div class="portada-texto">
+      <h1>Diseño que celebra la naturaleza</h1>
+    </div>
+  </section>
+
+  <!-- Portada principal con presentación -->
+  <header class="portada">
+    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua" />
+    <div class="texto-portada">
+      <h1>EcoRaíz Paisajismo</h1>
+      <p>
+        <strong>El paisajismo</strong> combina <em>arte, diseño</em> y <em>conocimientos técnicos</em><br>
+        para crear espacios exteriores e interiores <strong>funcionales</strong> y <strong>armoniosos</strong>.<br>
+        Priorizamos la <span class="verde">sustentabilidad</span> y la <span class="verde">biodiversidad ambiental</span>,<br>
+        respetando <em>nuestro ecosistema natural</em>.
+      </p>
+    </div>
+  </header>
+
+</body>
+</html>
   </p>
 </section>
 
