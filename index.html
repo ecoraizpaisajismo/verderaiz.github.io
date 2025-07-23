@@ -1,233 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="css/efemerides.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
   <title>EcoRaíz Paisajismo</title>
   <style>
-    body <script>
-function toggleContent(id) {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === 'block' ? 'none' : 'block';
-}
-</script> {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f9f6;
-  color: #3a4a3f;
-  margin: 0;
-  padding: 0;
-
-  /* 🌿 Ajustes para respirar visualmente */
-  padding-left: 20px;
-  padding-right: 20px;
-}
-    {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f9f6;
-      color: #3a4a3f;
-      margin: 0;
-      padding: 0;
+    /* ===== VARIABLES Y RESET RÁPIDO ===== */
+    :root {
+      --verde: #3a5a40;
+      --verde-claro: #abc4aa;
+      --blanco: #fff;
+      --gris: #f4f4f4;
     }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; color: var(--verde); line-height:1.6; background: var(--gris); }
 
-    header.portada {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      overflow: hidden;
-    }
+    /* ===== NAVEGACIÓN ===== */
+    header { background: var(--verde); position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width:1200px; margin:auto; padding:1rem; display:flex; align-items:center; justify-content:space-between; }
+    .logo a { color: var(--blanco); font-size:1.5rem; text-decoration:none; font-weight:bold; }
+    nav ul { list-style:none; display:flex; gap:1rem; }
+    nav a { color: var(--blanco); text-decoration:none; padding:0.5rem; }
+    nav a:hover, nav a.active { background: var(--verde-claro); border-radius:4px; }
 
-    header.portada img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
+    /* ===== HAMBURGUESA MÓVIL ===== */
+    .hamburger { display:none; flex-direction:column; cursor:pointer; }
+    .hamburger span { height:3px; width:25px; background:#fff; margin-bottom:4px; border-radius:2px; }
 
-    .texto-portada {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      max-width: 90%;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 12px;
-    }
+    /* ===== HERO ===== */
+    .hero { position: relative; width:100%; height:60vh; background: url('tu-hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
+    .hero::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    .hero-content { position: relative; color:#fff; text-align:center; max-width:90%; }
+    .hero-content h1 { font-size:2.5rem; margin-bottom:1rem; }
+    .hero-content p { font-size:1.2rem; margin-bottom:1.5rem; }
+    .hero-content .btn { background: var(--verde-claro); color: var(--verde); padding:0.75rem 1.5rem; text-decoration:none; font-weight:bold; border-radius:4px; }
 
-    .texto-portada h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
+    /* ===== SECCIONES ===== */
+    section { padding:4rem 1rem; max-width:1200px; margin:auto; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.1); margin-bottom:2rem; }
+    #servicios .grid, #proyectos .grid { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background:#fafafa; border-radius:8px; overflow:hidden; display:flex; flex-direction:column; }
+    .card img { width:100%; height:180px; object-fit:cover; }
+    .card h3 { margin:1rem; font-size:1.25rem; }
+    .card p { margin:0 1rem 1rem; flex-grow:1; }
+    .card .btn-secondary { margin:0 1rem 1rem; background: var(--verde); color:#fff; padding:0.5rem; text-align:center; text-decoration:none; border-radius:4px; }
 
-    .texto-portada p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
+    /* ===== FORMULARIO ===== */
+    #contacto form { display:flex; flex-wrap:wrap; gap:1rem; }
+    #contacto input, #contacto textarea { flex:1 1 300px; padding:0.75rem; border:1px solid #ccc; border-radius:4px; }
+    #contacto button { background: var(--verde); color:#fff; border:none; padding:0.75rem 1.5rem; cursor:pointer; border-radius:4px; }
 
-    @media (max-width: 600px) {
-      .texto-portada h1 {
-        font-size: 1.4em;
-      }
-
-      .texto-portada p {
-        font-size: 0.95em;
-      }
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px) {
+      nav ul { display:none; flex-direction:column; background: var(--verde); position:absolute; top:70px; right:0; width:200px; }
+      nav ul.show { display:flex; }
+      .hamburger { display:flex; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Imagen de portada secundaria -->
-  <section class="imagen-portada">
-    <img src="images/inicio-paisaje.jpg" alt="Paisaje emocional y diseño sustentable" />
-    <div class="portada-texto">
-      <h1>Diseño que celebra la naturaleza</h1>
+<header>
+  <div class="nav-container">
+    <div class="logo"><a href="#">EcoRaíz</a></div>
+    <nav>
+      <ul id="menu">
+        <li><a href="#servicios" class="active">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="document.getElementById('menu').classList.toggle('show')">
+      <span></span><span></span><span></span>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- Portada principal con presentación -->
-  <header class="portada">
-    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua" />
-    <div class="texto-portada">
-      <h1>EcoRaíz Paisajismo</h1>
-      <p>
-        <strong>El paisajismo</strong> combina <em>arte, diseño</em> y <em>conocimientos técnicos</em><br>
-        para crear espacios exteriores e interiores <strong>funcionales</strong> y <strong>armoniosos</strong>.<br>
-        Priorizamos la <span class="verde">sustentabilidad</span> y la <span class="verde">biodiversidad ambiental</span>,<br>
-        respetando <em>nuestro ecosistema natural</em>.
-      </p>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Diseñamos espacios verdes que crecen con vos</h1>
+    <p>Sostenibilidad, estética y plusvalía en cada proyecto.</p>
+    <a href="#contacto" class="btn">Solicitá tu cotización</a>
+  </div>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="servicio1.jpg" alt="Diseño de jardines">
+      <h3>Diseño de Jardines</h3>
+      <p>Propuestas personalizadas con especies autóctonas para bajo mantenimiento.</p>
+      <a href="#contacto" class="btn-secondary">Solicitar Diseño</a>
     </div>
-  </header>
+    <!-- Más servicios -->
+  </div>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="antes-despues.jpg" alt="Antes y después">
+      <h3>Jardín Familiar</h3>
+      <p>Renovación completa con sistema de riego y área de descanso.</p>
+      <a href="#contacto" class="btn-secondary">Ver más</a>
+    </div>
+    <!-- Más proyectos -->
+  </div>
+</section>
+
+<section id="testimonios">
+  <h2>Testimonios</h2>
+  <blockquote>"EcoRaíz transformó nuestro patio en un oasis funcional..." – Cliente</blockquote>
+  <!-- Añadí más -->
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <form action="/enviar" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="tel" name="telefono" placeholder="Teléfono" required>
+    <textarea name="mensaje" rows="4" placeholder="Cuéntanos de tu espacio" required></textarea>
+    <button type="submit">Enviar consulta</button>
+  </form>
+</section>
+
+<script>
+  // Script mínimo para el menú móvil
+  // ya incluido en el onclick del hamburger
+</script>
 
 </body>
 </html>
-  </p>
-</section>
-
-
-      
-  </p>
-</section>
-      
-    </div>
-  </header>
-
-    
-
-    <section id="biodiversidad" class="biodiversidad-section">
-  <h2>Recursos para la biodiversidad 🌿</h2>
-<section id="galeria-biodiversidad" class="galeria-bio">
-  <h2>Inspiración viva: atraer naturaleza al jardín</h2>
-
-<div class="biodiversidad-frase">
-  <p>“Donde hay vuelo, hay alma. Y donde hay sombra viva, siempre hay un nido esperando.”</p>
-</div>
-  
-  <div class="bio-grid">
-    <div class="bio-item">
-      <img src="images/mariposa.jpg" alt="Mariposa en flor">
-      <p>Mariposas: vuelo ligero que embellece y poliniza. Atraídas por lavanda y verbena.</p>
-    </div>
-
-    <div class="bio-item">
-      <img src="images/ave-autóctona.jpg" alt="Ave pequeña autóctona">
-      <p>Aves autóctonas: presencia sonora y ecológica. Bebederos discretos bajo sombra.</p>
-    </div>
-
-    <div class="bio-item">
-      <img src="images/salvia.jpg" alt="Salvia en floración">
-      <p>Salvia: floración generosa y aroma dulce. Aliada de abejas y mariposas.</p>
-    </div>
-
-    <div class="bio-item">
-      <img src="images/comedero.jpg" alt="Comedero artesanal">
-      <p>Comederos elevados: invitan a aves sin interferir. Diseños cálidos y sutiles.</p>
-    </div>
-  </div>
-</section>
-      
-  <details class="bio-card">
-    <summary>🦋 Plantas que atraen mariposas</summary>
-    <p>
-      Propuestas visuales y aromáticas: <strong>lavanda, lantana, salvia, verbena</strong>.  
-      Ideales para bordes florales, rincones contemplativos y macetas temáticas.  
-      Sugerencia emocional: espacios que inviten al vuelo ligero y a la polinización activa.
-    </p>
-  </details>
-
-  <details class="bio-card">
-    <summary>🐦 Aves pequeñas autóctonas</summary>
-    <p>
-      Especies como <strong>zorzales, jilgueros, tacuaritas</strong> enriquecen el paisaje sonoro y visual.  
-      Recomendación: incluir árboles nativos como <strong{">espinillo</strong> y <strong>sauce criollo</strong>.  
-      Diseño complementario: comederos elevados y bebederos discretos en zonas tranquilas.
-    </p>
-  </details>
-
-  <details class="bio-card">
-    <summary>🌼 Propuesta de comederos y bebederos</summary>
-    <p>
-      Diseños artesanales en madera, cerámica o reciclado.  
-      Ubicación sugerida: bajo sombra parcial, lejos de tránsito humano directo.  
-      Sugerencia emocional: invitar al visitante a crear pequeños refugios vivos en sus propios jardines.
-    </p>
-  </details>
-</section>  
-      
-</section>
-
- <section id="portfolio" class="portfolio-section">
-  <h2>Portfolio paisajístico emocional</h2>
-
-  <div class="portfolio-item">
-    <img src="images/pileta-principal.jpg" alt="Pileta paisajística">
-    <p>Diseño que transmite frescura, expansión y contemplación junto al agua.</p>
-  </div>
-
-  <div class="portfolio-item">
-    <img src="images/fogon.jpg" alt="Fogón paisajístico">
-    <p>Un espacio íntimo donde el fuego invita a la reunión, la charla y la conexión con lo natural.</p>
-  </div>
-
-  <<div class="portfolio-item">
-  <img src="images/pergola-principal.jpg" alt="Pérgola paisajística">
-  <p>Espacio que filtra luz y sombra, invitando a la pausa y al refugio natural.</p>
-</div>
-    
-    !-- Espacio listo para futuras categorías -->
-
-  <div class="portfolio-item">
-    <img src="images/maceta-principal.jpg" alt="Maceta decorativa">
-    <p>Elemento que aporta textura, color y vida en rincones interiores o exteriores.</p>
-  </div>
-
-  <div class="portfolio-item">
-    <img src="images/riego-sustentable.jpg" alt="Sistema de riego">
-    <p>Soluciones invisibles que nutren el paisaje desde la raíz, con bajo impacto visual.</p>
-  </div>
-
-</section>
-
-<section id="efemerides-recursos" class="efemerides-section">
-  <h2>Efemérides paisajísticas y emocionales</h2>
-
-  <!-- Sección Estaciones con botones colapsables -->
-<div class="estaciones-container">
-  <button class="estacion-btn" onclick="toggleContent('primavera')">🌸 Primavera</button>
-  <div id="primavera" class="estacion-content">Consejos de jardinería, diseño y biodiversidad para la primavera...</div>
-
-  <button class="estacion-btn" onclick="toggleContent('verano')">☀️ Verano</button>
-  <div id="verano" class="estacion-content">Cuidados para plantas con sol intenso, sombra y eventos al aire libre...</div>
-
-  <button class="estacion-btn" onclick="toggleContent('otoño')">🍂 Otoño</button>
-  <div id="otoño" class="estacion-content">Ideas para podas, compost y colores cálidos en el diseño paisajístico...</div>
-
-  <button class="estacion-btn" onclick="toggleContent('invierno')">❄️ Invierno</button>
-  <div id="invierno" class="estacion-content">Recomendaciones para proteger raíces, crear espacios cálidos y más...</div>
-</div>
-  
-  
