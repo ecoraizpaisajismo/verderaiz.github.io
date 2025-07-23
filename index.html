@@ -199,64 +199,19 @@
 <section id="efemerides-recursos" class="efemerides-section">
   <h2>Efemérides paisajísticas y emocionales</h2>
 
-  <!-- ☀️ VERANO: 21 diciembre – 20 marzo -->
-  <h3>☀️ Verano</h3>
-  <details class="efem-card">
-    <summary>🌞 Enero</summary>
-    <p>Mes de planificación paisajística. Ideal para sombra natural, riego y encuentros al aire libre como Reyes. Ambientaciones frescas y vegetación resistente.</p>
-  </details>
-  <details class="efem-card">
-    <summary>🎭 Febrero</summary>
-    <p>Carnaval, cumpleaños al aire libre, agua en movimiento. Jardines con ritmo, fogones nocturnos y sombra para reuniones. Polinizadores activos: mariposas y abejas.</p>
-  </details>
-  <details class="efem-card">
-    <summary>🍃 Marzo</summary>
-    <p>Inicio del otoño. Colores cálidos, espacios contemplativos, ambientaciones para actos escolares y patios meditativos. Ideal para especies aromáticas y de follaje rojizo.</p>
-  </details>
+  <!-- Sección Estaciones con botones colapsables -->
+<div class="estaciones-container">
+  <button class="estacion-btn" onclick="toggleContent('primavera')">🌸 Primavera</button>
+  <div id="primavera" class="estacion-content">Consejos de jardinería, diseño y biodiversidad para la primavera...</div>
 
-  <!-- 🍂 OTOÑO: 21 marzo – 20 junio -->
-  <h3>🍂 Otoño</h3>
-  <details class="efem-card">
-    <summary>🌾 Abril</summary>
-    <p>Día del animal. Diseños que celebren la fauna autóctona, con caminos suaves y bebederos para aves pequeñas. Inicio de poda liviana y selección de plantas con frutos.</p>
-  </details>
-  <details class="efem-card">
-    <summary>🌷 Mayo</summary>
-    <p>Mes de reflexión: Día del trabajador, día de la patria. Espacios de calma y colores ocres. Propuesta de macetas ornamentales, rincones verdes y tejidos visuales cálidos.</p>
-  </details>
-  <details class="efem-card">
-    <summary>❄️ Junio</summary>
-    <p>Inicio del invierno. Diseño introspectivo: pérgolas con vegetación caduca, iluminación cálida. Recomendaciones de comederos para aves autóctonas y fogones de reunión.</p>
-  </details>
+  <button class="estacion-btn" onclick="toggleContent('verano')">☀️ Verano</button>
+  <div id="verano" class="estacion-content">Cuidados para plantas con sol intenso, sombra y eventos al aire libre...</div>
 
-  <!-- ❄️ INVIERNO: 21 junio – 20 septiembre -->
-  <h3>❄️ Invierno</h3>
-  <details class="efem-card">
-    <summary>🪵 Julio</summary>
-    <p>Frío profundo. Espacios de abrigo, selección de especies resistentes. Preparación para primavera: incorporación de estructuras verticales y suelo enriquecido.</p>
-  </details>
-  <details class="efem-card">
-    <summary>🍁 Agosto</summary>
-    <p>Mes de la infancia. Diseño para el juego seguro: texturas suaves, colores vivos, caminos de descubrimiento. Ideas para espacios infantiles verdes y participativos.</p>
-  </details>
-  <details class="efem-card">
-    <summary>🌍 Septiembre</summary>
-    <p>Inicio de la primavera. Día del estudiante, día de la primavera. Jardines vivos, mariposas, plantas aromáticas. Recomendación de especies que atraen biodiversidad.</p>
-  </details>
+  <button class="estacion-btn" onclick="toggleContent('otoño')">🍂 Otoño</button>
+  <div id="otoño" class="estacion-content">Ideas para podas, compost y colores cálidos en el diseño paisajístico...</div>
 
-  <!-- 🌸 PRIMAVERA: 21 septiembre – 20 diciembre -->
-  <h3>🌸 Primavera</h3>
-  <details class="efem-card">
-    <summary>🎓 Octubre</summary>
-    <p>Día del paisajista, Día del jardín. Diseño celebrativo. Talleres en espacios verdes, macetas creativas, caminos con flores. Ideal para propuestas educativas.</p>
-  </details>
-  <details class="efem-card">
-    <summary>🌈 Noviembre</summary>
-    <p>Mes de los colores. Exposición de floraciones, selección de especies con valor visual. Propuesta de diseño inclusivo: rampas, señalética emocional.</p>
-  </details>
-  <details class="efem-card">
-    <summary>🎄 Diciembre</summary>
-    <p>Fin de año. Eventos especiales: casamientos, aniversarios, reuniones. Diseño festivo, luces cálidas, jardines con intención. Cierre emocional del ciclo paisajístico.</p>
-  </details>
+  <button class="estacion-btn" onclick="toggleContent('invierno')">❄️ Invierno</button>
+  <div id="invierno" class="estacion-content">Recomendaciones para proteger raíces, crear espacios cálidos y más...</div>
+</div>
   
   
