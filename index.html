@@ -14,7 +14,27 @@
       --gris: #f4f4f4;
     }
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: Arial, sans-serif; color: var(--verde); line-height:1.6; background: var(--gris); }
+    body { font-family: Arial, sans-serif; color: var(--verde); line-height:1.6; background: var(--gris);<script>
+  function abrirGaleria() {
+    document.getElementById('galeria-overlay').style.display = 'flex';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const cerrarBtn = document.getElementById('cerrar-galeria');
+    const overlay = document.getElementById('galeria-overlay');
+
+    cerrarBtn.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        overlay.style.display = 'none';
+      }
+    });
+  });
+</script>
+ }
 
     /* ===== NAVEGACIÓN ===== */
     header { background: var(--verde); position: sticky; top: 0; z-index: 100; }
