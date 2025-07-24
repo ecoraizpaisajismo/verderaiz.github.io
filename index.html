@@ -186,14 +186,30 @@ function toggleContent(id) {
     <div class="card">
       <img src="servicio1.jpg" alt="Diseño de jardines">
       <h3>Diseño de Jardines</h3>
-      <p>Propuestas personalizadas con especies autóctonas para bajo mantenimiento.</p>
+      <p>Propuestas personalizadas con especies autóctonas que reequieren un bajo mantenimiento.</p>
         <button class="btn-secondary" onclick="abrirGaleria()">Ver sugerencias</button>
+      
       
       <a href="#contacto" class="btn-secondary">Solicitar Diseño</a>
     </div>
     <!-- Más servicios -->
   </div>
 </section>
+  </section>
+
+<!-- Galería oculta inicialmente -->
+<div id="galeria-overlay" style="display:none;">
+  <div id="galeria-contenedor">
+    <button id="cerrar-galeria">&times;</button>
+    <div id="galeria-imagenes">
+      <img src="img1.jpg" alt="Opción 1">
+      <img src="img2.jpg" alt="Opción 2">
+      <img src="img3.jpg" alt="Opción 3">
+      <!-- más imágenes -->
+    </div>
+  </div>
+</div>
+
 
 <section id="proyectos">
   <h2>Proyectos</h2>
