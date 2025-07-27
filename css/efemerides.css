@@ -1,4 +1,4 @@
-Bpdy {background-color: #dfeee9; /* Verde grisáceo suave */
+{ Body {background-color: #dfeee9; /* Verde grisáceo suave */
 }
 
 
@@ -375,4 +375,10 @@ Bpdy {background-color: #dfeee9; /* Verde grisáceo suave */
   body {
   background-color: #dfeee9;
 }
-  
+footer {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  color: #444;
+  background-color: #e4f0e9; /* si querés un tono suave de fondo */
+}  
