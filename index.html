@@ -1,198 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-</head>
- 
-<body>
-
-  <!-- TODO tu contenido visible va acá -->
-
-</body>
-</html>
-
-
-<html lang="es">
-<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoRaíz Paisajismo</title>
-  <style>
-
-    /* ===== VARIABLES Y RESET RÁPIDO ===== */
-    :root {
-      --verde: #3a5a40;
-      --verde-claro: #abc4aa;
-      --blanco: #fff;
-      --gris: #f4f4f4;
-    }
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-     function abrirGaleria() {
-    document.getElementById('galeria-overlay').style.display = 'flex';
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const cerrarBtn = document.getElementById('cerrar-galeria');
-    const overlay = document.getElementById('galeria-overlay');
-
-    cerrarBtn.addEventListener('click', function() {
-      overlay.style.display = 'none';
-    });
-
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) {
-        overlay.style.display = 'none';
-      }
-    });
-  });
-</script>
-   </body> 
-   { font-family: Arial, sans-serif; color: var(--verde); line-height:1.6; background: var(--gris);<script>
- 
- }
-
-    /* ===== NAVEGACIÓN ===== */
-    header { background: var(--verde); position: sticky; top: 0; z-index: 100; }
-    .nav-container { max-width:1200px; margin:auto; padding:1rem; display:flex; align-items:center; justify-content:space-between; }
-    .logo a { color: var(--blanco); font-size:1.5rem; text-decoration:none; font-weight:bold; }
-    nav ul { list-style:none; display:flex; gap:1rem; }
-    nav a { color: var(--blanco); text-decoration:none; padding:0.5rem; }
-    nav a:hover, nav a.active { background: var(--verde-claro); border-radius:4px; }
-
-    /* ===== HAMBURGUESA MÓVIL ===== */
-    .hamburger { display:none; flex-direction:column; cursor:pointer; }
-    .hamburger span { height:3px; width:25px; background:#fff; margin-bottom:4px; border-radius:2px; }
-
-    /* ===== HERO ===== */
-    .hero { position: relative; width:100%; height:60vh; background: url('tu-hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
-    .hero::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
-    .hero-content { position: relative; color:#fff; text-align:center; max-width:90%; }
-    .hero-content h1 { font-size:2.5rem; margin-bottom:1rem; }
-    .hero-content p { font-size:1.2rem; margin-bottom:1.5rem; }
-    .hero-content .btn { background: var(--verde-claro); color: var(--verde); padding:0.75rem 1.5rem; text-decoration:none; font-weight:bold; border-radius:4px; }
-
-    /* ===== SECCIONES ===== */
-    section { padding:4rem 1rem; max-width:1200px; margin:auto; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.1); margin-bottom:2rem; }
-    #servicios .grid, #proyectos .grid { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); }
-    .card { background:#fafafa; border-radius:8px; overflow:hidden; display:flex; flex-direction:column; }
-    .card img { width:100%; height:180px; object-fit:cover; }
-    .card h3 { margin:1rem; font-size:1.25rem; }
-    .card p { margin:0 1rem 1rem; flex-grow:1; }
-    .card .btn-secondary { margin:0 1rem 1rem; background: var(--verde); color:#fff; padding:0.5rem; text-align:center; text-decoration:none; border-radius:4px; }
-
-    /* ===== FORMULARIO ===== */
-    #contacto form { display:flex; flex-wrap:wrap; gap:1rem; }
-    #contacto input, #contacto textarea { flex:1 1 300px; padding:0.75rem; border:1px solid #ccc; border-radius:4px; }
-    #contacto button { background: var(--verde); color:#fff; border:none; padding:0.75rem 1.5rem; cursor:pointer; border-radius:4px; }
-
-    /* ===== RESPONSIVE ===== */
-    @media(max-width:768px) {
-      nav ul { display:none; flex-direction:column; background: var(--verde); position:absolute; top:70px; right:0; width:200px; }
-      nav ul.show { display:flex; }
-      .hamburger { display:flex; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/fondo.css">
+  <link rel="stylesheet" href="css/efemerides.css">
 </head>
 <body>
-  
-  <!-- Portada principal con presentación -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <link rel="stylesheet" href="css/efemerides.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoRaíz Paisajismo</title>
-  <style>
 
-    <script>
-function toggleContent(id) {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === 'block' ? 'none' : 'block';
-}
-</script> {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f9f6;
-  color: #3a4a3f;
-  margin: 0;
-  padding: 0;
-    
-    body
-    
-
-  /* 🌿 Ajustes para respirar visualmente */
-  padding-left: 20px;
-  padding-right: 20px;
-}
-    {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f9f6;
-      color: #3a4a3f;
-      margin: 0;
-      padding: 0;
-    }
-
-    header.portada {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      overflow: hidden;
-    }
-
-    header.portada img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
-
-    .texto-portada {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      max-width: 90%;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 12px;
-    }
-
-    .texto-portada h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .texto-portada p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 600px) {
-      .texto-portada h1 {
-        font-size: 1.4em;
-      }
-
-      .texto-portada p {
-        font-size: 0.95em;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Imagen de portada secundaria -->
-<section class="hero-portada">
-  <h2>Lo diseñamos por vos</h2>
-  <p>Paisaje emocional y diseño sustentable</p>
-</section>
- 
-
-  <!-- Portada principal con presentación -->
+  <!-- 🌱 Portada principal -->
   <header class="portada">
-    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua" />
+    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua">
     <div class="texto-portada">
       <h1>EcoRaíz Paisajismo</h1>
       <p>
@@ -200,99 +19,87 @@ function toggleContent(id) {
         para crear espacios exteriores e interiores <strong>funcionales</strong> y <strong>armoniosos</strong>.<br>
         Priorizamos la <span class="verde">sustentabilidad</span> y la <span class="verde">biodiversidad ambiental</span>,<br>
         respetando <em>nuestro ecosistema natural</em>.
-         
       </p>
     </div>
   </header>
 
-</body>
-<div class="imagen-colapsable">
-  <button onclick="mostrarImagen(this)">🌱 Ver imagen</button>
-  <div class="contenedor-imagen" style="display: none; margin: 24px 0;">
-    <img src="images/nombre-de-tu-imagen.jpg" alt="Diseño emocional" class="imagen-portfolio" />
-    <p class="texto-emocional">Este rincón florece cuando lo descubrís 💚</p>
-  </div>
-  
-</html>
-  </p>
-</section>
-
-      
-  </p>
-</section>
-      
-    </div>
-  </header>
-
-  
-</section>
-<!-- Galería oculta inicialmente -->
-</body>
-      <div id="galeria-overlay" style="display:none;">
-  <div id="galeria-contenedor">
-    <button id="cerrar-galeria">&times;</button>
-    <div id="galeria-imagenes">
-      <img src="images/bordefloresenarbol-lilas.jpg" alt="Bordefloresenarbollila">
-      <img src="images/caminodepiedra-lavandas.jpg" alt="Caminodepiedraconlavandas">
-      <img src="images/caminoenarbol-paisajismo.jpg" alt="Caminoenarbolpaisajismo">
-      <img src="images/canteroarbol-piedrasblancas.jpg" alt="Canteroarbolconpiedrasblancas">
-      <img src="images/canterocentraltrasnisioncolorlila.jpg" alt="Canterocentralcolorlila">
-      <!-- Agregá más de esta forma, copiando la línea y cambiando src y alt -->
+  <!-- 🌸 Imagen colapsable -->
+  <div class="imagen-colapsable">
+    <button onclick="mostrarImagen(this)">🌱 Ver imagen</button>
+    <div class="contenedor-imagen" style="display: none; margin: 24px 0;">
+      <img src="images/nombre-de-tu-imagen.jpg" alt="Diseño emocional" class="imagen-portfolio">
+      <p class="texto-emocional">Este rincón florece cuando lo descubrís 💚</p>
     </div>
   </div>
-</div>
-      
 
-
-<!-- Galería oculta inicialmente -->
-
-
-</div>
-
-
-<section id="proyectos y servicios">
-  <h2>Proyectos y Servicios</h2>
-  <div class="grid">
-    <div class="card">
-     
-      <h3>Diseño de jardínes</h3>
-      <h3>Renovación completa con sistema de riego y área de descanso</h3>
-       <h3>Huertas en canteros elevandos</h3>
-       <h3>Canteros con aromaticas y hortalizas</h3>
-       <h3>Jardin vertical</h3>
-       <h3>Muros verdes</h3>
-      <a href="#contacto" class="btn-secondary">Ver más</a>
+  <!-- 🌼 Galería -->
+  <div id="galeria-overlay" style="display:none;">
+    <div id="galeria-contenedor">
+      <button id="cerrar-galeria">&times;</button>
+      <div id="galeria-imagenes">
+        <img src="images/bordefloresenarbol-lilas.jpg" alt="Borde lilas">
+        <img src="images/caminodepiedra-lavandas.jpg" alt="Lavandas">
+        <img src="images/caminoenarbol-paisajismo.jpg" alt="Camino árbol">
+        <img src="images/canteroarbol-piedrasblancas.jpg" alt="Cantero con piedras">
+        <img src="images/canterocentraltrasnisioncolorlila.jpg" alt="Transición lila">
+      </div>
     </div>
-    <!-- Más proyectos -->
   </div>
-</section>
 
+  <!-- 🍃 Secciones -->
+  <section id="proyectos-servicios">
+    <h2>Proyectos y Servicios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Diseño de jardínes</h3>
+        <h3>Renovación completa con sistema de riego</h3>
+        <h3>Huertas y canteros</h3>
+        <h3>Muros verdes</h3>
+        <a href="#contacto" class="btn-secondary">Ver más</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- 📬 Formulario -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form action="/enviar" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <textarea name="mensaje" rows="4" placeholder="Cuéntanos de tu espacio" required></textarea>
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </section>
 
-<section id="contacto">
-  <h2>Contacto</h2>
-  <form action="/enviar" method="POST">
-    <input type="text" name="nombre" placeholder="Nombre" required>
-    <input type="tel" name="telefono" placeholder="Teléfono" required>
-    <textarea name="mensaje" rows="4" placeholder="Cuéntanos de tu espacio" required></textarea>
-    <button type="submit">Enviar consulta</button>
-  </form>
-</section>
+  <!-- 🌸 Test de visibilidad -->
+  <section>
+    <h2>Test de visibilidad</h2>
+    <img src="images/caminodepiedra-lavandas.jpg" alt="Prueba floral" style="width: 100%; max-width: 500px; border-radius: 12px; margin-top: 16px;">
+  </section>
 
-<script>
-  // Script mínimo para el menú móvil
-  // ya incluido en el onclick del hamburger
-</script>
-<section>
-  <h2>Este es su Test de visibilidad</h2>
-  <img src="images/caminodepiedra-lavandas.jpg"alt="Prueba floral" style="width: 100%; max-width: 500px; border-radius: 12px; margin-top: 16px;">
-  
-</section>
+  <!-- 🐾 Footer -->
   <footer class="footer-derechos">
-  <p>&copy; 2024 EcoRaíz Paisajismo. Todos los derechos reservados.</p>
-  <p>Contacto: <a href="mailto:contacto@verderaiz.com.ar">tu-contacto@verderaiz.com.ar</a> | Tel: +54 9 11 26458770</p>
- 
-</footer>
+    <p>&copy; 2024 EcoRaíz Paisajismo. Todos los derechos reservados.</p>
+    <p>Contacto: <a href="mailto:contacto@verderaiz.com.ar">contacto@verderaiz.com.ar</a> | Tel: +54 9 11 2645 8770</p>
+  </footer>
+
+  <!-- 📜 Script para mostrar galería -->
+  <script>
+    function mostrarImagen(boton) {
+      const contenedor = boton.nextElementSibling;
+      contenedor.style.display = contenedor.style.display === 'none' ? 'block' : 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const cerrarBtn = document.getElementById('cerrar-galeria');
+      const overlay = document.getElementById('galeria-overlay');
+
+      cerrarBtn.addEventListener('click', () => overlay.style.display = 'none');
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.style.display = 'none';
+      });
+    });
+  </script>
+
 </body>
 </html>
-<link rel="stylesheet" href="css/efemerides.css">
