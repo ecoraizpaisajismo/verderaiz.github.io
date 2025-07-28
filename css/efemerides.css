@@ -287,7 +287,15 @@
   align-items: center;
   justify-content: center;
 }
-
+.hero-intro {
+  background-color: #e4f0e9; /* Verde suave armonioso */
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1.4;
+  background-image: url("images/textura-hojas-suave.png"); /* si tenés una textura
+  
 .hero::before {
   content: "";
   position: absolute;
@@ -383,11 +391,4 @@ footer {
   background-color: #e4f0e9; /* si querés un tono suave de fondo */
 }  
 
-.hero-intro {
-  background-color: #e4f0e9; /* Verde suave armonioso */
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 500;
-  line-height: 1.4;
-  background-image: url("images/textura-hojas-suave.png"); /* si tenés una textura
+
