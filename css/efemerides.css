@@ -1,4 +1,26 @@
 { Body {background-color: #dfeee9; /* Verde grisáceo suave */
+.hero-intro {
+  background-color: #eae6f0; /* Fondo lavanda muy suave */
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #5a4e6b;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #716582;
+  font-style: italic;
+}
+        
 }
 
 
