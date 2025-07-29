@@ -1,192 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="css/efemerides.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcoRaíz Paisajismo</title>
   <style>
-    body <script>
-function toggleContent(id) {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === 'block' ? 'none' : 'block';
-}
-</script> {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f9f6;
-  color: #3a4a3f;
-  margin: 0;
-  padding: 0;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* 🌿 Ajustes para respirar visualmente */
-  padding-left: 20px;
-  padding-right: 20px;
-}
-    {
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f9f6;
-      color: #3a4a3f;
-      margin: 0;
-      padding: 0;
+      background-color: #dce9dd;
+      color: #234225;
     }
 
-    header.portada {
+    .hero {
       position: relative;
       width: 100%;
-      height: 400px;
-      overflow: hidden;
-    }
-
-    header.portada img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
-
-    .texto-portada {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
+      height: 60vh;
+      min-height: 300px;
+      background: linear-gradient(
+        rgba(237, 247, 242, 0.6),
+        rgba(237, 247, 242, 0.6)
+      ), url('images/hoja-verde.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #234225;
+      margin-bottom: 0.3em;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      color: #234225;
+    }
+
+    .hero .overlay-text {
       max-width: 90%;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 12px;
+      padding: 1rem 2rem;
+      background-color: rgba(237, 247, 242, 0.6);
+      border-radius: 8px;
     }
 
-    .texto-portada h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .texto-portada p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 600px) {
-      .texto-portada h1 {
-        font-size: 1.4em;
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
       }
-
-      .texto-portada p {
-        font-size: 0.95em;
+      .hero p {
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Imagen de portada secundaria -->
-  <section class="imagen-portada">
-    <img src="images/inicio-paisaje.jpg" alt="PAGINA EN CONSTRUCCION" />
-    <div class="portada-texto">
-      <h1>Diseño que celebra la naturaleza</h1>
+  <!-- Hero con imagen de hoja y frase superpuesta -->
+  <section class="hero">
+    <div class="overlay-text">
+      <h1>Lo diseñamos por vos</h1>
+      <p>Paisajes emocionales y diseño sustentable</p>
     </div>
   </section>
 
-  <!-- Portada principal con presentación -->
-  <header class="portada">
-    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua" />
-    <div class="texto-portada">
-      <h1>EcoRaíz Paisajismo</h1>
-      <p>
-        <strong>El paisajismo</strong> combina <em>arte, diseño</em> y <em>conocimientos técnicos</em><br>
-        para crear espacios exteriores e interiores <strong>funcionales</strong> y <strong>armoniosos</strong>.<br>
-        Priorizamos la <span class="verde">sustentabilidad</span> y la <span class="verde">biodiversidad ambiental</span>,<br>
-        respetando <em>nuestro ecosistema natural</em>.
-      </p>
+  <section class="seccion" style="text-align:center; padding:2em 1em;">
+    <h2>EcoRaíz Paisajismo</h2>
+    <p style="max-width:600px; margin:0.5em auto; line-height:1.5;">
+      El paisajismo sostenible une diseño y conocimiento científico para crear espacios exteriores de disfrute y relajación.<br>
+      Nuestra práctica está basada en la sostenibilidad y la biodiversidad ambiental, respetando nuestro entorno natural.
+    </p>
+  
+    <h3 style="margin-top:2em; font-size:1.5rem;">Proyectos y Servicios</h3>
+    <div style="max-width:700px; margin:1em auto; text-align:left; font-size:1.1rem;">
+      <p>Diseño de jardines</p>
+      <p>Renovación completa en sistemas de riego y áreas de descanso</p>
+      <p>Huertas en canteros elevados</p>
+      <p>Canteros con aromáticas y hortalizas</p>
+      <p>Jardín vertical</p>
+      <p>Muros verdes</p>
     </div>
-  </header>
+    <button class="boton" style="margin-top:1em; padding:0.6em 1.5em; background:#234225; color:#fff; border:none; border-radius:5px; cursor:pointer; font-size:1em;">Ver más</button>
+  </section>
 
 </body>
 </html>
-  </p>
-</section>    
 
-    <section id="biodiversidad" class="biodiversidad-section">
-  <h2>Recursos para la biodiversidad 🌿</h2>
-<section id="galeria-biodiversidad" class="galeria-bio">
-  <h2>Inspiración viva: atraer naturaleza al jardín</h2>
-
-      <p>Comederos elevados: invitan a aves sin interferir. Diseños cálidos y sutiles.</p>
-    </div>
-  </div>
-</section>
-      
-  <details class="bio-card">
-    <summary>🦋 Plantas que atraen mariposas</summary>
-    <p>
-      Propuestas visuales y aromáticas: <strong>lavanda, lantana, salvia, verbena</strong>.  
-      Ideales para bordes florales, rincones contemplativos y macetas temáticas.  
-      Sugerencia emocional: espacios que inviten al vuelo ligero y a la polinización activa.
-    </p>
-  </details>
-
-  <details class="bio-card">
-    <summary>🐦 Aves pequeñas autóctonas</summary>
-    <p>
-      Especies como <strong>zorzales, jilgueros, tacuaritas</strong> enriquecen el paisaje sonoro y visual.  
-      Recomendación: incluir árboles nativos como <strong{">espinillo</strong> y <strong>sauce criollo</strong>.  
-      Diseño complementario: comederos elevados y bebederos discretos en zonas tranquilas.
-    </p>
-  </details>
-
-  <details class="bio-card">
-    <summary>🌼 Propuesta de comederos y bebederos</summary>
-    <p>
-      Diseños artesanales en madera, cerámica o reciclado.  
-      Ubicación sugerida: bajo sombra parcial, lejos de tránsito humano directo.  
-      Sugerencia emocional: invitar al visitante a crear pequeños refugios vivos en sus propios jardines.
-    </p>
-  </details>
-</section>  
-
- <section id="portfolio" class="portfolio-section">
-  <h2>Portfolio paisajístico emocional</h2>
-
-  <div class="portfolio-item">
-    <img src="images/pileta-principal.jpg" alt="Pileta paisajística">
-    <p>Diseño que transmite frescura, expansión y contemplación junto al agua.</p>
-  </div>
-
-  <div class="portfolio-item">
-    <img src="images/fogon.jpg" alt="Fogón paisajístico">
-    <p>Un espacio íntimo donde el fuego invita a la reunión, la charla y la conexión con lo natural.</p>
-  </div>
-
-  <<div class="portfolio-item">
-  <img src="images/pergola-principal.jpg" alt="Pérgola paisajística">
-  <p>Espacio que filtra luz y sombra, invitando a la pausa y al refugio natural.</p>
-</div>
-  
-  <div class="portfolio-item">
-    <img src="images/riego-sustentable.jpg" alt="Sistema de riego">
-    <p>Soluciones invisibles que nutren el paisaje desde la raíz, con bajo impacto visual.</p>
-  </div>
-
-</section>
-
-<section id="efemerides-recursos" class="efemerides-section">
-  <h2>Efemérides paisajísticas y emocionales</h2>
-
-  <!-- Sección Estaciones con botones colapsables -->
-<div class="estaciones-container">
-  <button class="estacion-btn" onclick="toggleContent('primavera')">🌸 Primavera</button>
-  <div id="primavera" class="estacion-content">Consejos de jardinería, diseño y biodiversidad para la primavera...</div>
-
-  <button class="estacion-btn" onclick="toggleContent('verano')">☀️ Verano</button>
-  <div id="verano" class="estacion-content">Cuidados para plantas con sol intenso, sombra y eventos al aire libre...</div>
-
-  <button class="estacion-btn" onclick="toggleContent('otoño')">🍂 Otoño</button>
-  <div id="otoño" class="estacion-content">Ideas para podas, compost y colores cálidos en el diseño paisajístico...</div>
-
-  <button class="estacion-btn" onclick="toggleContent('invierno')">❄️ Invierno</button>
-  <div id="invierno" class="estacion-content">Recomendaciones para proteger raíces, crear espacios cálidos y más...</div>
-</div>
-  
-  
