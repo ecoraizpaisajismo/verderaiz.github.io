@@ -1,25 +1,46 @@
-.hero-intro {
-  background-color: #eae6f0;
-  padding: 60px 40px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero-content h2 {
-  font-size: 2.2rem;
-  font-weight
-.hero-portada {
-  background-image: url("../images/fondo-hero-suave.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 80px 30px;
-  text-align: center;
-  border-radius: 12px;
-  color: #444;
+body {
+  background-color: #f4f0f8; /* lavanda clara */
   font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-portada h2 {
-  font
+.portada {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.portada img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+
+.texto-portada {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.75);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #3b675b; /* verde grisáceo suave */
+  text-align: center;
+  margin-top: 2rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+section {
+  padding: 2rem;
+}
