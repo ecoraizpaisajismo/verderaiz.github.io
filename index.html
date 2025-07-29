@@ -1,84 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoRaíz Paisajismo</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<section style="text-align: center; background-color: #dce5dc; padding: 2rem 1rem;">
+  <h1 style="font-size: 2.5em; color: #1e392a;">Lo diseñamos por vos</h1>
+  <p style="font-size: 1.3em; color: #2f4736;">Paisajes emocionales y diseño sustentable</p>
+</section>
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #dce9dd;
-      color: #234225;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 60vh;
-      min-height: 300px;
-      background: linear-gradient(
-        rgba(237, 247, 242, 0.6),
-        rgba(237, 247, 242, 0.6)
-       ), url('images/hoja-verde.jpg') center/cover no-repeat; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      color: #234225;
-      margin-bottom: 0.3em;
-    }
-
-    .hero .overlay-text {
-      max-width: 90%;
-      padding: 1rem 2rem;
-      background-color: rgba(237, 247, 242, 0.6);
-      border-radius: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero p {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Hero con imagen de hoja y frase superpuesta -->
- <section class="hero-clean">
-  <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas" class="hero-img">
-  <div class="hero-caption">
-    <h1>EcoRaíz Paisajismo</h1>
-    <p>
-      El paisajismo combina arte, diseño y conocimientos técnicos<br>
-      para crear espacios exteriores e interiores funcionales y armoniosos.<br>
-      Priorizamos sustentabilidad y biodiversidad ambiental,<br>
-      respetando nuestro ecosistema natural.
+<section style="position: relative; width: 100%; height: 400px; overflow: hidden;">
+  <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua" style="width: 100%; height: 100%; object-fit: cover;">
+  <div style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+  ">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">EcoRaíz Paisajismo</h2>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+      El paisajismo sostenible une diseño y conocimiento científico<br>
+      para crear espacios exteriores de disfrute y relajación.<br>
+      Nuestra práctica lo basa en la sustentabilidad y la<br>
+      biodiversidad ambiental, respetando nuestro entorno natural.
     </p>
   </div>
 </section>
 
-    <h3 style="margin-top:2em; font-size:1.5rem;">Proyectos y Servicios</h3>
-    <div style="max-width:700px; margin:1em auto; text-align:left; font-size:1.1rem;">
-      <p>Diseño de jardines</p>
-      <p>Renovación completa en sistemas de riego y áreas de descanso</p>
-      <p>Huertas en canteros elevados</p>
-      <p>Canteros con aromáticas y hortalizas</p>
-      <p>Jardín vertical</p>
-      <p>Muros verdes</p>
-    </div>
-    <button class="boton" style="margin-top:1em; padding:0.6em 1.5em; background:#234225; color:#fff; border:none; border-radius:5px; cursor:pointer; font-size:1em;">Ver más</button>
-  </section>
+<section style="background-color: #dce5dc; padding: 3rem 1rem; text-align: center;">
+  <h2 style="font-size: 1.8rem; color: #1e392a; margin-bottom: 2rem;">Proyectos y Servicios</h2>
+  <ul style="list-style: none; padding: 0; font-size: 1.2rem; line-height: 2;">
+    <li><strong>Diseño de jardines</strong></li>
+    <li>Renovación completa en sistemas de riego y áreas de descanso</li>
+    <li>Huertas en canteros elevados</li>
+    <li>Canteros con aromáticas y hortalizas</li>
+    <li>Jardín vertical</li>
+    <li>Muros verdes</li>
+  </ul>
+  <a href="#contacto" style="
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #1e392a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  ">Ver más</a>
+</section>
 
-</body>
-</html>
 
