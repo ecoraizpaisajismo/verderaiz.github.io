@@ -1,34 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/efemerides.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcoRaíz Paisajismo</title>
-  <link rel="stylesheet" href="css/fondo.css">
+  <style>
+    body <script>
+function toggleContent(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+</script> {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f9f6;
+  color: #3a4a3f;
+  margin: 0;
+  padding: 0;
+
+  /* 🌿 Ajustes para respirar visualmente */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+    {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f9f6;
+      color: #3a4a3f;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.portada {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    header.portada img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+
+    .texto-portada {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      max-width: 90%;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+    }
+
+    .texto-portada h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .texto-portada p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .texto-portada h1 {
+        font-size: 1.4em;
+      }
+
+      .texto-portada p {
+        font-size: 0.95em;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="hero">
-    <h1>Lo diseñamos por vos</h1>
-    <h2>Paisajes emocionales y diseño sustentable</h2>
-    <div class="info">
-      <h3>EcoRaíz Paisajismo</h3>
+
+  <!-- Imagen de portada secundaria -->
+  <section class="imagen-portada">
+    <img src="images/inicio-paisaje.jpg" alt="Paisaje emocional y diseño sustentable" />
+    <div class="portada-texto">
+      <h1>Diseño que celebra la naturaleza</h1>
+    </div>
+  </section>
+
+  <!-- Portada principal con presentación -->
+  <header class="portada">
+    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua" />
+    <div class="texto-portada">
+      <h1>EcoRaíz Paisajismo</h1>
       <p>
-        El paisajismo sostenible une diseño y conocimiento científico para crear espacios exteriores de disfrute y relajación.
-        Nuestra práctica se basa en la sostenibilidad y la biodiversidad ambiental, respetando nuestro entorno natural.
+        <strong>El paisajismo</strong> combina <em>arte, diseño</em> y <em>conocimientos técnicos</em><br>
+        para crear espacios exteriores e interiores <strong>funcionales</strong> y <strong>armoniosos</strong>.<br>
+        Priorizamos la <span class="verde">sustentabilidad</span> y la <span class="verde">biodiversidad ambiental</span>,<br>
+        respetando <em>nuestro ecosistema natural</em>.
       </p>
     </div>
-    <div class="servicios">
-      <h4>Proyectos y Servicios</h4>
-      <ul>
-        <li>Diseño de jardines</li>
-        <li>Renovación completa en sistemas de riego y áreas de descanso</li>
-        <li>Huertas en canteros elevados</li>
-        <li>Canteros con aromáticas y hortalizas</li>
-        <li>Jardín vertical</li>
-        <li>Muros verdes</li>
-      </ul>
-    </div>
-    <a href="#" class="boton">Ver más</a>
-  </div>
+  </header>
+
 </body>
 </html>
+  </p>
+</section>
+
+
+      
+  </p>
+</section>
+      
+    </div>
+  </header>
