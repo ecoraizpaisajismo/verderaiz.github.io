@@ -6,100 +6,62 @@
   <title>EcoRaíz Paisajismo</title>
   <link rel="stylesheet" href="css/fondo.css">
   <link rel="stylesheet" href="css/efemerides.css">
+  <link rel="stylesheet" href="css/galeria.css">
+  <link rel="stylesheet" href="css/margenes.css">
 </head>
 <body>
 
-  <!-- 🌱 Portada principal -->
+  <!-- 🌱 PORTADA -->
   <header class="portada">
-    <img src="images/hoja-verde.jpg" alt="Hoja verde con gotas de agua">
+    <img src="images/hoja-verde.jpg" alt="Hoja con gotas">
     <div class="texto-portada">
       <h1>EcoRaíz Paisajismo</h1>
       <p>
-        <strong>El paisajismo</strong> combina <em>arte, diseño</em> y <em>conocimientos técnicos</em><br>
-        para crear espacios exteriores e interiores <strong>funcionales</strong> y <strong>armoniosos</strong>.<br>
-        Priorizamos la <span class="verde">sustentabilidad</span> y la <span class="verde">biodiversidad ambiental</span>,<br>
-        respetando <em>nuestro ecosistema natural</em>.
+        Diseñamos espacios que respetan el ecosistema natural,<br>
+        integrando arte, diseño y biodiversidad.<br>
+        Tu jardín puede ser un refugio para la contemplación<br>
+        y una herramienta educativa viva.
       </p>
     </div>
   </header>
 
-  <!-- 🌸 Imagen colapsable -->
-  <div class="imagen-colapsable">
-    <button onclick="mostrarImagen(this)">🌱 Ver imagen</button>
-    <div class="contenedor-imagen" style="display: none; margin: 24px 0;">
-      <img src="images/nombre-de-tu-imagen.jpg" alt="Diseño emocional" class="imagen-portfolio">
-      <p class="texto-emocional">Este rincón florece cuando lo descubrís 💚</p>
-    </div>
-  </div>
-
-  <!-- 🌼 Galería -->
-  <div id="galeria-overlay" style="display:none;">
-    <div id="galeria-contenedor">
-      <button id="cerrar-galeria">&times;</button>
-      <div id="galeria-imagenes">
-        <img src="images/bordefloresenarbol-lilas.jpg" alt="Borde lilas">
-        <img src="images/caminodepiedra-lavandas.jpg" alt="Lavandas">
-        <img src="images/caminoenarbol-paisajismo.jpg" alt="Camino árbol">
-        <img src="images/canteroarbol-piedrasblancas.jpg" alt="Cantero con piedras">
-        <img src="images/canterocentraltrasnisioncolorlila.jpg" alt="Transición lila">
-      </div>
-    </div>
-  </div>
-
-  <!-- 🍃 Secciones -->
-  <section id="proyectos-servicios">
+  <!-- 🛠 PROYECTOS Y SERVICIOS -->
+  <section id="servicios">
     <h2>Proyectos y Servicios</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Diseño de jardínes</h3>
-        <h3>Renovación completa con sistema de riego</h3>
-        <h3>Huertas y canteros</h3>
-        <h3>Muros verdes</h3>
-        <a href="#contacto" class="btn-secondary">Ver más</a>
-      </div>
+    <ul>
+      <li>Diseño de jardines residenciales y educativos</li>
+      <li>Renovación con riego inteligente y áreas de descanso</li>
+      <li>Huertas en canteros elevados</li>
+      <li>Canteros de aromáticas, hortalizas y flores nativas</li>
+      <li>Jardines verticales y muros verdes</li>
+      <li>Asesoramiento en biodiversidad aplicada</li>
+    </ul>
+  </section>
+
+  <!-- 🌸 EFEMÉRIDES Y EDUCACIÓN AMBIENTAL -->
+  <section id="efemerides">
+    <h2>Educación Ambiental</h2>
+    <p>Descubrí las efemérides verdes que honran la biodiversidad cada mes.</p>
+    <div class="contenedor-efemerides">
+      <!-- Aquí insertaremos tus efemérides ilustradas -->
     </div>
   </section>
 
-  <!-- 📬 Formulario -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <form action="/enviar" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="tel" name="telefono" placeholder="Teléfono" required>
-      <textarea name="mensaje" rows="4" placeholder="Cuéntanos de tu espacio" required></textarea>
-      <button type="submit">Enviar consulta</button>
-    </form>
+  <!-- 🖼 GALERÍA VISUAL COLAPSABLE -->
+  <section id="galeria">
+    <h2>Galería Emocional</h2>
+    <button id="mostrarGaleria">Ver imágenes</button>
+    <div class="contenedor-galeria colapsada">
+      <!-- Tus imágenes se desplegarán solo al hacer clic -->
+    </div>
   </section>
 
-  <!-- 🌸 Test de visibilidad -->
-  <section>
-    <h2>Test de visibilidad</h2>
-    <img src="images/caminodepiedra-lavandas.jpg" alt="Prueba floral" style="width: 100%; max-width: 500px; border-radius: 12px; margin-top: 16px;">
-  </section>
-
-  <!-- 🐾 Footer -->
-  <footer class="footer-derechos">
-    <p>&copy; 2024 EcoRaíz Paisajismo. Todos los derechos reservados.</p>
-    <p>Contacto: <a href="mailto:contacto@verderaiz.com.ar">contacto@verderaiz.com.ar</a> | Tel: +54 9 11 2645 8770</p>
+  <!-- 📞 FOOTER CON CONTACTO Y AUTORÍA -->
+  <footer>
+    <p>&copy; 2024 Ana María Paola Machirola – Todos los derechos reservados.</p>
+    <p>Diseño, imágenes y contenidos originales. Celebramos la autoría y el proceso creativo.</p>
+    <p>Contacto: <a href="mailto:info@ecoraiz.com.ar">info@ecoraiz.com.ar</a> | Tel: +54 9 11 2645 8770</p>
   </footer>
-
-  <!-- 📜 Script para mostrar galería -->
-  <script>
-    function mostrarImagen(boton) {
-      const contenedor = boton.nextElementSibling;
-      contenedor.style.display = contenedor.style.display === 'none' ? 'block' : 'none';
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const cerrarBtn = document.getElementById('cerrar-galeria');
-      const overlay = document.getElementById('galeria-overlay');
-
-      cerrarBtn.addEventListener('click', () => overlay.style.display = 'none');
-      overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) overlay.style.display = 'none';
-      });
-    });
-  </script>
 
 </body>
 </html>
