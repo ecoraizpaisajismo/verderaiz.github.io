@@ -33,12 +33,12 @@
 
 .hero-caption p {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
   .hero {
-    height: auto;     /* altura natural según contenido */
+    height: 520px;     /* altura natural según contenido */
     min-height: 60svh; /* altura segura en móviles con URL bar dinámica */
   }
 
