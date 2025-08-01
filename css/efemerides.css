@@ -93,6 +93,19 @@
   color: #fff;
 }
 
+/* 📌 Imagen centrada al final — responsiva y limpia */
+.footer-imagen {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.footer-imagen .imagen-final {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 
