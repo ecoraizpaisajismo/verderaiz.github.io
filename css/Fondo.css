@@ -75,7 +75,7 @@ ul li {
 margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: #ffffff;
-  background-image: url('../img/canteropredominioverde-delimitante.jpg'); /* Asegurate que el nombre del archivo coincida */
+  background-image:('../img/canteropredominioverde-delimitante.jpg'); /* Asegurate que el nombre del archivo coincida */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
